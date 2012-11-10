@@ -10000,7 +10000,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="LED1" library="led" deviceset="LED" device="SML0805"/>
 <part name="X2" library="con-phoenix-381_l" deviceset="MC2" device=""/>
 <part name="X3" library="con-phoenix-381_l" deviceset="MC2" device=""/>
-<part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_LDO" device="SMD"/>
+<part name="U1" library="SparkFun-PowerIC" deviceset="V_REG_LDO" device="SMD" value="MIC5301"/>
 <part name="BOX2" library="hammond" deviceset="HAMMOND-BOX" device="-K"/>
 <part name="D2" library="diode" deviceset="BAT54" device=""/>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="BSS138" device="TRANS-00830" value="BSS138"/>
@@ -10140,6 +10140,24 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="C19" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND48" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
+<part name="R24" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R25" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="C20" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
+<part name="GND49" library="supply1" deviceset="GND" device=""/>
+<part name="R26" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R27" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="C21" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
+<part name="GND50" library="supply1" deviceset="GND" device=""/>
+<part name="R28" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R29" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="C22" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
+<part name="GND51" library="supply1" deviceset="GND" device=""/>
+<part name="R30" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
+<part name="LED7" library="led" deviceset="LED" device="SML0805"/>
+<part name="GND52" library="supply1" deviceset="GND" device=""/>
+<part name="C23" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
+<part name="GND53" library="supply1" deviceset="GND" device=""/>
+<part name="R31" library="rcl" deviceset="R-EU_" device="R0603" value="100k"/>
 </parts>
 <sheets>
 <sheet>
@@ -10152,8 +10170,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <text x="73.66" y="251.46" size="5.08" layer="97">Supply</text>
 <text x="236.22" y="88.9" size="5.08" layer="97">Relay 1</text>
 <text x="167.64" y="88.9" size="5.08" layer="97">Relay 2</text>
-<text x="309.88" y="251.46" size="5.08" layer="97">ISP</text>
-<text x="266.7" y="251.46" size="5.08" layer="97">Pullups</text>
+<text x="266.7" y="251.46" size="5.08" layer="97">ISP</text>
+<text x="327.66" y="78.74" size="5.08" layer="97">Pullups</text>
 <text x="302.26" y="160.02" size="5.08" layer="97">LEDs</text>
 <wire x1="134.62" y1="259.08" x2="259.08" y2="259.08" width="0.1524" layer="97"/>
 <wire x1="259.08" y1="259.08" x2="259.08" y2="175.26" width="0.1524" layer="97"/>
@@ -10168,25 +10186,25 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="299.72" y1="96.52" x2="233.68" y2="96.52" width="0.1524" layer="97"/>
 <wire x1="233.68" y1="96.52" x2="233.68" y2="40.64" width="0.1524" layer="97"/>
 <wire x1="71.12" y1="259.08" x2="129.54" y2="259.08" width="0.1524" layer="97"/>
-<wire x1="129.54" y1="259.08" x2="129.54" y2="220.98" width="0.1524" layer="97"/>
-<wire x1="129.54" y1="220.98" x2="71.12" y2="220.98" width="0.1524" layer="97"/>
-<wire x1="71.12" y1="220.98" x2="71.12" y2="259.08" width="0.1524" layer="97"/>
-<wire x1="307.34" y1="259.08" x2="355.6" y2="259.08" width="0.1524" layer="97"/>
-<wire x1="355.6" y1="259.08" x2="355.6" y2="231.14" width="0.1524" layer="97"/>
-<wire x1="355.6" y1="231.14" x2="307.34" y2="231.14" width="0.1524" layer="97"/>
-<wire x1="307.34" y1="231.14" x2="307.34" y2="259.08" width="0.1524" layer="97"/>
+<wire x1="129.54" y1="259.08" x2="129.54" y2="210.82" width="0.1524" layer="97"/>
+<wire x1="129.54" y1="210.82" x2="71.12" y2="210.82" width="0.1524" layer="97"/>
+<wire x1="71.12" y1="210.82" x2="71.12" y2="259.08" width="0.1524" layer="97"/>
+<wire x1="264.16" y1="259.08" x2="312.42" y2="259.08" width="0.1524" layer="97"/>
+<wire x1="312.42" y1="259.08" x2="312.42" y2="231.14" width="0.1524" layer="97"/>
+<wire x1="312.42" y1="231.14" x2="264.16" y2="231.14" width="0.1524" layer="97"/>
+<wire x1="264.16" y1="231.14" x2="264.16" y2="259.08" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="259.08" x2="66.04" y2="259.08" width="0.1524" layer="97"/>
 <wire x1="66.04" y1="259.08" x2="66.04" y2="200.66" width="0.1524" layer="97"/>
 <wire x1="66.04" y1="200.66" x2="5.08" y2="200.66" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="200.66" x2="5.08" y2="259.08" width="0.1524" layer="97"/>
-<wire x1="264.16" y1="259.08" x2="302.26" y2="259.08" width="0.1524" layer="97"/>
-<wire x1="302.26" y1="259.08" x2="302.26" y2="220.98" width="0.1524" layer="97"/>
-<wire x1="302.26" y1="220.98" x2="264.16" y2="220.98" width="0.1524" layer="97"/>
-<wire x1="264.16" y1="220.98" x2="264.16" y2="259.08" width="0.1524" layer="97"/>
-<wire x1="299.72" y1="109.22" x2="383.54" y2="109.22" width="0.1524" layer="97"/>
-<wire x1="383.54" y1="109.22" x2="383.54" y2="170.18" width="0.1524" layer="97"/>
+<wire x1="325.12" y1="86.36" x2="363.22" y2="86.36" width="0.1524" layer="97"/>
+<wire x1="363.22" y1="86.36" x2="363.22" y2="48.26" width="0.1524" layer="97"/>
+<wire x1="363.22" y1="48.26" x2="325.12" y2="48.26" width="0.1524" layer="97"/>
+<wire x1="325.12" y1="48.26" x2="325.12" y2="86.36" width="0.1524" layer="97"/>
+<wire x1="299.72" y1="106.68" x2="383.54" y2="106.68" width="0.1524" layer="97"/>
+<wire x1="383.54" y1="106.68" x2="383.54" y2="170.18" width="0.1524" layer="97"/>
 <wire x1="383.54" y1="170.18" x2="299.72" y2="170.18" width="0.1524" layer="97"/>
-<wire x1="299.72" y1="170.18" x2="299.72" y2="109.22" width="0.1524" layer="97"/>
+<wire x1="299.72" y1="170.18" x2="299.72" y2="106.68" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="170.18" x2="160.02" y2="170.18" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="170.18" x2="160.02" y2="93.98" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="93.98" x2="5.08" y2="93.98" width="0.1524" layer="97"/>
@@ -10195,9 +10213,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="160.02" y1="88.9" x2="160.02" y2="12.7" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="12.7" x2="5.08" y2="12.7" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="12.7" x2="5.08" y2="88.9" width="0.1524" layer="97"/>
-<wire x1="165.1" y1="170.18" x2="294.64" y2="170.18" width="0.1524" layer="97"/>
-<wire x1="294.64" y1="170.18" x2="294.64" y2="101.6" width="0.1524" layer="97"/>
-<wire x1="294.64" y1="101.6" x2="165.1" y2="101.6" width="0.1524" layer="97"/>
+<wire x1="165.1" y1="170.18" x2="297.18" y2="170.18" width="0.1524" layer="97"/>
+<wire x1="297.18" y1="170.18" x2="297.18" y2="101.6" width="0.1524" layer="97"/>
+<wire x1="297.18" y1="101.6" x2="165.1" y2="101.6" width="0.1524" layer="97"/>
 <wire x1="165.1" y1="101.6" x2="165.1" y2="170.18" width="0.1524" layer="97"/>
 <text x="7.62" y="182.88" size="1.778" layer="97">INA219</text>
 <text x="10.16" y="177.8" size="1.778" layer="97">Vsh range: +-320mV (/8), +-160mV (/4), +-80mV (/2) or +-40mV (/2)</text>
@@ -10206,6 +10224,11 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="5.08" y1="187.96" x2="114.3" y2="187.96" width="0.1524" layer="97"/>
 <wire x1="114.3" y1="187.96" x2="114.3" y2="172.72" width="0.1524" layer="97"/>
 <wire x1="114.3" y1="172.72" x2="5.08" y2="172.72" width="0.1524" layer="97"/>
+<text x="266.7" y="220.98" size="5.08" layer="97">Input Measurement</text>
+<wire x1="264.16" y1="228.6" x2="363.22" y2="228.6" width="0.1524" layer="97"/>
+<wire x1="363.22" y1="228.6" x2="363.22" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="363.22" y1="175.26" x2="264.16" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="264.16" y1="175.26" x2="264.16" y2="228.6" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="LICENSE1" gate="G$1" x="289.56" y="25.4"/>
@@ -10213,18 +10236,18 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="IC1" gate="1" x="205.74" y="215.9"/>
 <instance part="+3V1" gate="G$1" x="172.72" y="215.9"/>
 <instance part="GND1" gate="1" x="172.72" y="180.34"/>
-<instance part="C1" gate="G$1" x="76.2" y="238.76"/>
+<instance part="C1" gate="G$1" x="76.2" y="228.6"/>
 <instance part="R1" gate="G$1" x="43.18" y="228.6" smashed="yes">
 <attribute name="NAME" x="38.1" y="228.6" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="48.26" y="228.6" size="1.778" layer="96"/>
 </instance>
 <instance part="U$1" gate="G$1" x="17.78" y="220.98" rot="MR0"/>
 <instance part="X1" gate="G$1" x="147.32" y="144.78"/>
-<instance part="LED1" gate="G$1" x="322.58" y="124.46"/>
-<instance part="X2" gate=".1" x="213.36" y="160.02"/>
-<instance part="X2" gate=".2" x="213.36" y="154.94"/>
-<instance part="X3" gate=".1" x="284.48" y="157.48" rot="MR0"/>
-<instance part="X3" gate=".2" x="284.48" y="152.4" rot="MR0"/>
+<instance part="LED1" gate="G$1" x="314.96" y="121.92"/>
+<instance part="X2" gate=".1" x="210.82" y="160.02"/>
+<instance part="X2" gate=".2" x="210.82" y="154.94"/>
+<instance part="X3" gate=".1" x="287.02" y="157.48" rot="MR0"/>
+<instance part="X3" gate=".2" x="287.02" y="142.24" rot="MR0"/>
 <instance part="U1" gate="G$1" x="101.6" y="236.22"/>
 <instance part="BOX2" gate="G$1" x="271.78" y="10.16"/>
 <instance part="D2" gate="G$1" x="177.8" y="132.08" rot="R90"/>
@@ -10232,8 +10255,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="JP1" gate="G$1" x="50.8" y="154.94" rot="MR0"/>
 <instance part="U2" gate="G$1" x="55.88" y="111.76"/>
 <instance part="K1" gate="1" x="187.96" y="132.08"/>
-<instance part="K1" gate="2" x="233.68" y="160.02" rot="R270"/>
-<instance part="K1" gate="3" x="233.68" y="144.78" rot="R270"/>
+<instance part="K1" gate="2" x="231.14" y="160.02" rot="R270"/>
+<instance part="K1" gate="3" x="231.14" y="144.78" rot="R270"/>
 <instance part="U3" gate="G$1" x="76.2" y="144.78"/>
 <instance part="P+2" gate="1" x="25.4" y="246.38" smashed="yes">
 <attribute name="VALUE" x="27.94" y="248.92" size="1.778" layer="96" rot="R180"/>
@@ -10257,16 +10280,16 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="+3V3" gate="G$1" x="111.76" y="246.38" smashed="yes">
 <attribute name="VALUE" x="114.3" y="248.92" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND4" gate="1" x="86.36" y="226.06"/>
-<instance part="GND5" gate="1" x="121.92" y="226.06"/>
-<instance part="P+4" gate="1" x="76.2" y="246.38" smashed="yes">
-<attribute name="VALUE" x="78.74" y="248.92" size="1.778" layer="96" rot="R180"/>
+<instance part="GND4" gate="1" x="86.36" y="215.9"/>
+<instance part="GND5" gate="1" x="121.92" y="215.9"/>
+<instance part="P+4" gate="1" x="76.2" y="236.22" smashed="yes">
+<attribute name="VALUE" x="78.74" y="238.76" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND6" gate="1" x="76.2" y="226.06"/>
-<instance part="+3V4" gate="G$1" x="121.92" y="246.38" smashed="yes">
-<attribute name="VALUE" x="124.46" y="248.92" size="1.778" layer="96" rot="R180"/>
+<instance part="GND6" gate="1" x="76.2" y="215.9"/>
+<instance part="+3V4" gate="G$1" x="121.92" y="236.22" smashed="yes">
+<attribute name="VALUE" x="124.46" y="238.76" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C2" gate="G$1" x="121.92" y="238.76"/>
+<instance part="C2" gate="G$1" x="121.92" y="228.6"/>
 <instance part="C3" gate="G$1" x="139.7" y="195.58"/>
 <instance part="C4" gate="G$1" x="147.32" y="195.58"/>
 <instance part="C5" gate="G$1" x="154.94" y="195.58"/>
@@ -10284,39 +10307,39 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="C8" gate="G$1" x="149.86" y="226.06"/>
 <instance part="GND9" gate="1" x="149.86" y="215.9"/>
 <instance part="GND10" gate="1" x="139.7" y="215.9"/>
-<instance part="ISP1" gate="A" x="330.2" y="243.84"/>
-<instance part="GND11" gate="1" x="345.44" y="236.22"/>
-<instance part="+3V6" gate="G$1" x="345.44" y="251.46" smashed="yes">
-<attribute name="VALUE" x="347.98" y="254" size="1.778" layer="96" rot="R180"/>
+<instance part="ISP1" gate="A" x="287.02" y="243.84"/>
+<instance part="GND11" gate="1" x="302.26" y="236.22"/>
+<instance part="+3V6" gate="G$1" x="302.26" y="251.46" smashed="yes">
+<attribute name="VALUE" x="304.8" y="254" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R4" gate="G$1" x="289.56" y="236.22" smashed="yes" rot="R270">
-<attribute name="NAME" x="292.1" y="236.22" size="1.778" layer="95"/>
-<attribute name="VALUE" x="292.1" y="233.68" size="1.778" layer="96"/>
+<instance part="R4" gate="G$1" x="350.52" y="63.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="353.06" y="63.5" size="1.778" layer="95"/>
+<attribute name="VALUE" x="353.06" y="60.96" size="1.778" layer="96"/>
 </instance>
-<instance part="+3V7" gate="G$1" x="289.56" y="246.38" smashed="yes">
-<attribute name="VALUE" x="292.1" y="248.92" size="1.778" layer="96" rot="R180"/>
+<instance part="+3V7" gate="G$1" x="350.52" y="73.66" smashed="yes">
+<attribute name="VALUE" x="353.06" y="76.2" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R5" gate="G$1" x="279.4" y="236.22" smashed="yes" rot="R270">
-<attribute name="NAME" x="281.94" y="236.22" size="1.778" layer="95"/>
-<attribute name="VALUE" x="281.94" y="233.68" size="1.778" layer="96"/>
+<instance part="R5" gate="G$1" x="340.36" y="63.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="342.9" y="63.5" size="1.778" layer="95"/>
+<attribute name="VALUE" x="342.9" y="60.96" size="1.778" layer="96"/>
 </instance>
-<instance part="R6" gate="G$1" x="269.24" y="236.22" smashed="yes" rot="R270">
-<attribute name="NAME" x="271.78" y="236.22" size="1.778" layer="95"/>
-<attribute name="VALUE" x="271.78" y="233.68" size="1.778" layer="96"/>
+<instance part="R6" gate="G$1" x="330.2" y="63.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="332.74" y="63.5" size="1.778" layer="95"/>
+<attribute name="VALUE" x="332.74" y="60.96" size="1.778" layer="96"/>
 </instance>
-<instance part="+3V8" gate="G$1" x="279.4" y="246.38" smashed="yes">
-<attribute name="VALUE" x="281.94" y="248.92" size="1.778" layer="96" rot="R180"/>
+<instance part="+3V8" gate="G$1" x="340.36" y="73.66" smashed="yes">
+<attribute name="VALUE" x="342.9" y="76.2" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="+3V9" gate="G$1" x="269.24" y="246.38" smashed="yes">
-<attribute name="VALUE" x="271.78" y="248.92" size="1.778" layer="96" rot="R180"/>
+<instance part="+3V9" gate="G$1" x="330.2" y="73.66" smashed="yes">
+<attribute name="VALUE" x="332.74" y="76.2" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="P+1" gate="1" x="40.64" y="162.56" smashed="yes">
 <attribute name="VALUE" x="43.18" y="165.1" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="U$2" gate="G$1" x="17.78" y="139.7" rot="MR0"/>
-<instance part="R7" gate="G$1" x="322.58" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="325.12" y="134.62" size="1.778" layer="95"/>
-<attribute name="VALUE" x="325.12" y="132.08" size="1.778" layer="96"/>
+<instance part="R7" gate="G$1" x="314.96" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="317.5" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="317.5" y="129.54" size="1.778" layer="96"/>
 </instance>
 <instance part="GND12" gate="1" x="12.7" y="124.46"/>
 <instance part="GND13" gate="1" x="22.86" y="134.62"/>
@@ -10385,25 +10408,25 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="+3V13" gate="G$1" x="43.18" y="30.48" smashed="yes">
 <attribute name="VALUE" x="45.72" y="33.02" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="U8" gate="G$1" x="226.06" y="119.38"/>
-<instance part="+3V14" gate="G$1" x="238.76" y="132.08" smashed="yes">
-<attribute name="VALUE" x="241.3" y="134.62" size="1.778" layer="96" rot="R180"/>
+<instance part="U8" gate="G$1" x="223.52" y="119.38"/>
+<instance part="+3V14" gate="G$1" x="236.22" y="132.08" smashed="yes">
+<attribute name="VALUE" x="238.76" y="134.62" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND30" gate="1" x="238.76" y="106.68"/>
-<instance part="C13" gate="G$1" x="246.38" y="121.92"/>
-<instance part="R16" gate="G$1" x="259.08" y="127" smashed="yes">
-<attribute name="NAME" x="254" y="127" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="264.16" y="127" size="1.778" layer="96"/>
+<instance part="GND30" gate="1" x="236.22" y="106.68"/>
+<instance part="C13" gate="G$1" x="243.84" y="121.92"/>
+<instance part="R16" gate="G$1" x="256.54" y="127" smashed="yes">
+<attribute name="NAME" x="251.46" y="127" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="261.62" y="127" size="1.778" layer="96"/>
 </instance>
-<instance part="R17" gate="G$1" x="259.08" y="114.3" smashed="yes">
-<attribute name="NAME" x="254" y="114.3" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="264.16" y="114.3" size="1.778" layer="96"/>
+<instance part="R17" gate="G$1" x="256.54" y="114.3" smashed="yes">
+<attribute name="NAME" x="251.46" y="114.3" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="261.62" y="114.3" size="1.778" layer="96"/>
 </instance>
-<instance part="R18" gate="G$1" x="271.78" y="157.48" smashed="yes">
-<attribute name="NAME" x="269.24" y="162.56" size="1.778" layer="95"/>
-<attribute name="VALUE" x="269.24" y="160.02" size="1.778" layer="96"/>
+<instance part="R18" gate="G$1" x="269.24" y="157.48" smashed="yes">
+<attribute name="NAME" x="266.7" y="162.56" size="1.778" layer="95"/>
+<attribute name="VALUE" x="266.7" y="160.02" size="1.778" layer="96"/>
 </instance>
-<instance part="GND31" gate="1" x="213.36" y="106.68"/>
+<instance part="GND31" gate="1" x="210.82" y="106.68"/>
 <instance part="C14" gate="G$1" x="119.38" y="144.78"/>
 <instance part="C15" gate="G$1" x="119.38" y="63.5"/>
 <instance part="GND32" gate="1" x="119.38" y="134.62"/>
@@ -10412,8 +10435,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <attribute name="VALUE" x="190.5" y="147.32" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND34" gate="1" x="187.96" y="106.68"/>
-<instance part="GND35" gate="1" x="215.9" y="149.86"/>
-<instance part="GND36" gate="1" x="281.94" y="147.32"/>
+<instance part="GND35" gate="1" x="213.36" y="149.86"/>
+<instance part="GND36" gate="1" x="281.94" y="137.16"/>
 <instance part="D1" gate="G$1" x="243.84" y="71.12" rot="R90"/>
 <instance part="K2" gate="1" x="254" y="71.12"/>
 <instance part="P+6" gate="1" x="254" y="83.82" smashed="yes">
@@ -10430,31 +10453,31 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="Q3" gate="G$1" x="185.42" y="55.88"/>
 <instance part="GND38" gate="1" x="185.42" y="45.72"/>
 <instance part="JP3" gate="G$1" x="226.06" y="63.5" rot="MR0"/>
-<instance part="R19" gate="G$1" x="332.74" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="335.28" y="134.62" size="1.778" layer="95"/>
-<attribute name="VALUE" x="335.28" y="132.08" size="1.778" layer="96"/>
+<instance part="R19" gate="G$1" x="325.12" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="327.66" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="327.66" y="129.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R20" gate="G$1" x="342.9" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="345.44" y="134.62" size="1.778" layer="95"/>
-<attribute name="VALUE" x="345.44" y="132.08" size="1.778" layer="96"/>
+<instance part="R20" gate="G$1" x="335.28" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="337.82" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="337.82" y="129.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R21" gate="G$1" x="353.06" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="355.6" y="134.62" size="1.778" layer="95"/>
-<attribute name="VALUE" x="355.6" y="132.08" size="1.778" layer="96"/>
+<instance part="R21" gate="G$1" x="345.44" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="347.98" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="347.98" y="129.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R22" gate="G$1" x="363.22" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="365.76" y="134.62" size="1.778" layer="95"/>
-<attribute name="VALUE" x="365.76" y="132.08" size="1.778" layer="96"/>
+<instance part="R22" gate="G$1" x="355.6" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="358.14" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="358.14" y="129.54" size="1.778" layer="96"/>
 </instance>
-<instance part="R23" gate="G$1" x="373.38" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="375.92" y="134.62" size="1.778" layer="95"/>
-<attribute name="VALUE" x="375.92" y="132.08" size="1.778" layer="96"/>
+<instance part="R23" gate="G$1" x="365.76" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="368.3" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="368.3" y="129.54" size="1.778" layer="96"/>
 </instance>
-<instance part="LED2" gate="G$1" x="332.74" y="124.46"/>
-<instance part="LED3" gate="G$1" x="342.9" y="124.46"/>
-<instance part="LED4" gate="G$1" x="353.06" y="124.46"/>
-<instance part="LED5" gate="G$1" x="363.22" y="124.46"/>
-<instance part="LED6" gate="G$1" x="373.38" y="124.46"/>
+<instance part="LED2" gate="G$1" x="325.12" y="121.92"/>
+<instance part="LED3" gate="G$1" x="335.28" y="121.92"/>
+<instance part="LED4" gate="G$1" x="345.44" y="121.92"/>
+<instance part="LED5" gate="G$1" x="355.6" y="121.92"/>
+<instance part="LED6" gate="G$1" x="365.76" y="121.92"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="FRAME2" gate="G$2" x="287.02" y="0"/>
 <instance part="C16" gate="G$1" x="10.16" y="109.22"/>
@@ -10467,23 +10490,65 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <instance part="+3V21" gate="G$1" x="10.16" y="35.56" smashed="yes">
 <attribute name="VALUE" x="12.7" y="38.1" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C18" gate="G$1" x="287.02" y="116.84"/>
-<instance part="GND41" gate="1" x="287.02" y="106.68"/>
-<instance part="+3V22" gate="G$1" x="287.02" y="124.46" smashed="yes">
-<attribute name="VALUE" x="289.56" y="127" size="1.778" layer="96" rot="R180"/>
+<instance part="C18" gate="G$1" x="289.56" y="116.84"/>
+<instance part="GND41" gate="1" x="289.56" y="106.68"/>
+<instance part="+3V22" gate="G$1" x="289.56" y="124.46" smashed="yes">
+<attribute name="VALUE" x="292.1" y="127" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND42" gate="1" x="322.58" y="114.3"/>
-<instance part="GND43" gate="1" x="332.74" y="114.3"/>
-<instance part="GND44" gate="1" x="342.9" y="114.3"/>
-<instance part="GND45" gate="1" x="353.06" y="114.3"/>
-<instance part="GND46" gate="1" x="363.22" y="114.3"/>
-<instance part="GND47" gate="1" x="373.38" y="114.3"/>
+<instance part="GND42" gate="1" x="314.96" y="111.76"/>
+<instance part="GND43" gate="1" x="325.12" y="111.76"/>
+<instance part="GND44" gate="1" x="335.28" y="111.76"/>
+<instance part="GND45" gate="1" x="345.44" y="111.76"/>
+<instance part="GND46" gate="1" x="355.6" y="111.76"/>
+<instance part="GND47" gate="1" x="365.76" y="111.76"/>
 <instance part="K3" gate="3" x="210.82" y="66.04" rot="R90"/>
 <instance part="K2" gate="3" x="279.4" y="66.04" rot="R90"/>
-<instance part="C19" gate="G$1" x="279.4" y="116.84"/>
-<instance part="GND48" gate="1" x="279.4" y="106.68"/>
-<instance part="P+8" gate="1" x="279.4" y="124.46" smashed="yes">
-<attribute name="VALUE" x="281.94" y="127" size="1.778" layer="96" rot="R180"/>
+<instance part="C19" gate="G$1" x="281.94" y="116.84"/>
+<instance part="GND48" gate="1" x="281.94" y="106.68"/>
+<instance part="P+8" gate="1" x="281.94" y="124.46" smashed="yes">
+<attribute name="VALUE" x="284.48" y="127" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="R24" gate="G$1" x="281.94" y="208.28" smashed="yes" rot="R270">
+<attribute name="NAME" x="284.48" y="208.28" size="1.778" layer="95"/>
+<attribute name="VALUE" x="284.48" y="205.74" size="1.778" layer="96"/>
+</instance>
+<instance part="R25" gate="G$1" x="281.94" y="193.04" smashed="yes" rot="R270">
+<attribute name="NAME" x="284.48" y="193.04" size="1.778" layer="95"/>
+<attribute name="VALUE" x="284.48" y="190.5" size="1.778" layer="96"/>
+</instance>
+<instance part="C20" gate="G$1" x="276.86" y="195.58" rot="MR0"/>
+<instance part="GND49" gate="1" x="281.94" y="180.34"/>
+<instance part="R26" gate="G$1" x="312.42" y="208.28" smashed="yes" rot="R270">
+<attribute name="NAME" x="314.96" y="208.28" size="1.778" layer="95"/>
+<attribute name="VALUE" x="314.96" y="205.74" size="1.778" layer="96"/>
+</instance>
+<instance part="R27" gate="G$1" x="312.42" y="193.04" smashed="yes" rot="R270">
+<attribute name="NAME" x="314.96" y="193.04" size="1.778" layer="95"/>
+<attribute name="VALUE" x="314.96" y="190.5" size="1.778" layer="96"/>
+</instance>
+<instance part="C21" gate="G$1" x="307.34" y="195.58" rot="MR0"/>
+<instance part="GND50" gate="1" x="312.42" y="180.34"/>
+<instance part="R28" gate="G$1" x="342.9" y="208.28" smashed="yes" rot="R270">
+<attribute name="NAME" x="345.44" y="208.28" size="1.778" layer="95"/>
+<attribute name="VALUE" x="345.44" y="205.74" size="1.778" layer="96"/>
+</instance>
+<instance part="R29" gate="G$1" x="342.9" y="193.04" smashed="yes" rot="R270">
+<attribute name="NAME" x="345.44" y="193.04" size="1.778" layer="95"/>
+<attribute name="VALUE" x="345.44" y="190.5" size="1.778" layer="96"/>
+</instance>
+<instance part="C22" gate="G$1" x="337.82" y="195.58" rot="MR0"/>
+<instance part="GND51" gate="1" x="342.9" y="180.34"/>
+<instance part="R30" gate="G$1" x="375.92" y="132.08" smashed="yes" rot="R270">
+<attribute name="NAME" x="378.46" y="132.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="378.46" y="129.54" size="1.778" layer="96"/>
+</instance>
+<instance part="LED7" gate="G$1" x="375.92" y="121.92"/>
+<instance part="GND52" gate="1" x="375.92" y="111.76"/>
+<instance part="C23" gate="G$1" x="111.76" y="226.06"/>
+<instance part="GND53" gate="1" x="111.76" y="215.9"/>
+<instance part="R31" gate="G$1" x="281.94" y="149.86" smashed="yes" rot="R270">
+<attribute name="NAME" x="284.48" y="149.86" size="1.778" layer="95"/>
+<attribute name="VALUE" x="284.48" y="147.32" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -10515,7 +10580,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
-<wire x1="121.92" y1="241.3" x2="121.92" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="231.14" x2="121.92" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="AVCC"/>
@@ -10547,23 +10612,23 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="ISP1" gate="A" pin="2"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
-<wire x1="335.28" y1="246.38" x2="345.44" y2="246.38" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="246.38" x2="345.44" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="246.38" x2="302.26" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="246.38" x2="302.26" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
-<wire x1="289.56" y1="241.3" x2="289.56" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="68.58" x2="350.52" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
-<wire x1="279.4" y1="241.3" x2="279.4" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="68.58" x2="340.36" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
-<wire x1="269.24" y1="241.3" x2="269.24" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="68.58" x2="330.2" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VS"/>
@@ -10586,8 +10651,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="U8" gate="G$1" pin="VS"/>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
-<wire x1="236.22" y1="127" x2="238.76" y2="127" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="127" x2="238.76" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="127" x2="236.22" y2="127" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="127" x2="236.22" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C16" gate="G$1" pin="1"/>
@@ -10602,7 +10667,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="C18" gate="G$1" pin="1"/>
 <pinref part="+3V22" gate="G$1" pin="+3V3"/>
-<wire x1="287.02" y1="121.92" x2="287.02" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="121.92" x2="289.56" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -10625,7 +10690,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="76.2" y1="241.3" x2="76.2" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="231.14" x2="76.2" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
@@ -10666,7 +10731,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="C19" gate="G$1" pin="1"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
-<wire x1="279.4" y1="119.38" x2="279.4" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="119.38" x2="281.94" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -10706,17 +10771,17 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pinref part="U1" gate="G$1" pin="GND"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="91.44" y1="236.22" x2="86.36" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="236.22" x2="86.36" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="236.22" x2="86.36" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="76.2" y1="233.68" x2="76.2" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="223.52" x2="76.2" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="121.92" y1="228.6" x2="121.92" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="218.44" x2="121.92" y2="223.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -10763,8 +10828,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="ISP1" gate="A" pin="6"/>
 <pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="335.28" y1="241.3" x2="345.44" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="241.3" x2="345.44" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="241.3" x2="302.26" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="241.3" x2="302.26" y2="238.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="MTN4"/>
@@ -10901,14 +10966,14 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="U8" gate="G$1" pin="GND"/>
 <pinref part="GND30" gate="1" pin="GND"/>
-<wire x1="236.22" y1="111.76" x2="238.76" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="111.76" x2="238.76" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="111.76" x2="236.22" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="111.76" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U8" gate="G$1" pin="A1"/>
-<wire x1="215.9" y1="111.76" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="111.76" x2="210.82" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="GND31" gate="1" pin="GND"/>
-<wire x1="213.36" y1="111.76" x2="213.36" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="111.76" x2="210.82" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND32" gate="1" pin="GND"/>
@@ -10928,14 +10993,17 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="X2" gate=".2" pin="SK"/>
 <pinref part="GND35" gate="1" pin="GND"/>
-<wire x1="213.36" y1="154.94" x2="215.9" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="154.94" x2="215.9" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="154.94" x2="213.36" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="154.94" x2="213.36" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X3" gate=".2" pin="SK"/>
 <pinref part="GND36" gate="1" pin="GND"/>
-<wire x1="284.48" y1="152.4" x2="281.94" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="281.94" y1="152.4" x2="281.94" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="142.24" x2="281.94" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="142.24" x2="281.94" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="281.94" y1="142.24" x2="281.94" y2="144.78" width="0.1524" layer="91"/>
+<junction x="281.94" y="142.24"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
@@ -10960,37 +11028,37 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="C18" gate="G$1" pin="2"/>
 <pinref part="GND41" gate="1" pin="GND"/>
-<wire x1="287.02" y1="109.22" x2="287.02" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="109.22" x2="289.56" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND42" gate="1" pin="GND"/>
-<wire x1="322.58" y1="119.38" x2="322.58" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="116.84" x2="314.96" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="GND43" gate="1" pin="GND"/>
-<wire x1="332.74" y1="119.38" x2="332.74" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="116.84" x2="325.12" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED3" gate="G$1" pin="C"/>
 <pinref part="GND44" gate="1" pin="GND"/>
-<wire x1="342.9" y1="119.38" x2="342.9" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="116.84" x2="335.28" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED4" gate="G$1" pin="C"/>
 <pinref part="GND45" gate="1" pin="GND"/>
-<wire x1="353.06" y1="119.38" x2="353.06" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="116.84" x2="345.44" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED5" gate="G$1" pin="C"/>
 <pinref part="GND46" gate="1" pin="GND"/>
-<wire x1="363.22" y1="119.38" x2="363.22" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="116.84" x2="355.6" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED6" gate="G$1" pin="C"/>
 <pinref part="GND47" gate="1" pin="GND"/>
-<wire x1="373.38" y1="119.38" x2="373.38" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="116.84" x2="365.76" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="A0"/>
@@ -11005,7 +11073,47 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="GND48" gate="1" pin="GND"/>
 <pinref part="C19" gate="G$1" pin="2"/>
-<wire x1="279.4" y1="109.22" x2="279.4" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="109.22" x2="281.94" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R25" gate="G$1" pin="2"/>
+<pinref part="GND49" gate="1" pin="GND"/>
+<wire x1="281.94" y1="187.96" x2="281.94" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="C20" gate="G$1" pin="2"/>
+<wire x1="281.94" y1="185.42" x2="281.94" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="185.42" x2="276.86" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="185.42" x2="276.86" y2="190.5" width="0.1524" layer="91"/>
+<junction x="281.94" y="185.42"/>
+</segment>
+<segment>
+<pinref part="R27" gate="G$1" pin="2"/>
+<pinref part="GND50" gate="1" pin="GND"/>
+<wire x1="312.42" y1="187.96" x2="312.42" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="C21" gate="G$1" pin="2"/>
+<wire x1="312.42" y1="185.42" x2="312.42" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="185.42" x2="307.34" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="185.42" x2="307.34" y2="190.5" width="0.1524" layer="91"/>
+<junction x="312.42" y="185.42"/>
+</segment>
+<segment>
+<pinref part="R29" gate="G$1" pin="2"/>
+<pinref part="GND51" gate="1" pin="GND"/>
+<wire x1="342.9" y1="187.96" x2="342.9" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="C22" gate="G$1" pin="2"/>
+<wire x1="342.9" y1="185.42" x2="342.9" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="342.9" y1="185.42" x2="337.82" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="185.42" x2="337.82" y2="190.5" width="0.1524" layer="91"/>
+<junction x="342.9" y="185.42"/>
+</segment>
+<segment>
+<pinref part="LED7" gate="G$1" pin="C"/>
+<pinref part="GND52" gate="1" pin="GND"/>
+<wire x1="375.92" y1="116.84" x2="375.92" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C23" gate="G$1" pin="2"/>
+<pinref part="GND53" gate="1" pin="GND"/>
+<wire x1="111.76" y1="218.44" x2="111.76" y2="220.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="USBC_DM" class="0">
@@ -11081,21 +11189,21 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </segment>
 <segment>
 <pinref part="ISP1" gate="A" pin="5"/>
-<wire x1="327.66" y1="241.3" x2="309.88" y2="241.3" width="0.1524" layer="91"/>
-<label x="309.88" y="241.3" size="1.778" layer="95"/>
+<wire x1="284.48" y1="241.3" x2="266.7" y2="241.3" width="0.1524" layer="91"/>
+<label x="266.7" y="241.3" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="289.56" y1="231.14" x2="289.56" y2="228.6" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="228.6" x2="299.72" y2="228.6" width="0.1524" layer="91"/>
-<label x="299.72" y="228.6" size="1.778" layer="95" rot="MR0"/>
+<wire x1="350.52" y1="58.42" x2="350.52" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="55.88" x2="360.68" y2="55.88" width="0.1524" layer="91"/>
+<label x="360.68" y="55.88" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
 <pinref part="ISP1" gate="A" pin="4"/>
-<wire x1="335.28" y1="243.84" x2="353.06" y2="243.84" width="0.1524" layer="91"/>
-<label x="353.06" y="243.84" size="1.778" layer="95" rot="MR0"/>
+<wire x1="292.1" y1="243.84" x2="309.88" y2="243.84" width="0.1524" layer="91"/>
+<label x="309.88" y="243.84" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="PB3(MOSI/OC2A/PCINT3)"/>
@@ -11106,25 +11214,37 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <net name="MISO" class="0">
 <segment>
 <pinref part="ISP1" gate="A" pin="1"/>
-<wire x1="327.66" y1="246.38" x2="309.88" y2="246.38" width="0.1524" layer="91"/>
-<label x="309.88" y="246.38" size="1.778" layer="95"/>
+<wire x1="284.48" y1="246.38" x2="266.7" y2="246.38" width="0.1524" layer="91"/>
+<label x="266.7" y="246.38" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="PB4(MISO/PCINT4)"/>
 <wire x1="236.22" y1="187.96" x2="256.54" y2="187.96" width="0.1524" layer="91"/>
 <label x="256.54" y="187.96" size="1.778" layer="95" rot="MR0"/>
 </segment>
+<segment>
+<label x="302.26" y="144.78" size="1.778" layer="95"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="302.26" y1="144.78" x2="335.28" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="144.78" x2="335.28" y2="137.16" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="SCK" class="0">
 <segment>
 <pinref part="ISP1" gate="A" pin="3"/>
-<wire x1="327.66" y1="243.84" x2="309.88" y2="243.84" width="0.1524" layer="91"/>
-<label x="309.88" y="243.84" size="1.778" layer="95"/>
+<wire x1="284.48" y1="243.84" x2="266.7" y2="243.84" width="0.1524" layer="91"/>
+<label x="266.7" y="243.84" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="PB5(SCK/PCINT5)"/>
 <wire x1="236.22" y1="185.42" x2="256.54" y2="185.42" width="0.1524" layer="91"/>
 <label x="256.54" y="185.42" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="R30" gate="G$1" pin="1"/>
+<wire x1="302.26" y1="154.94" x2="375.92" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="375.92" y1="154.94" x2="375.92" y2="137.16" width="0.1524" layer="91"/>
+<label x="302.26" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -11135,9 +11255,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="269.24" y1="231.14" x2="269.24" y2="223.52" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="223.52" x2="299.72" y2="223.52" width="0.1524" layer="91"/>
-<label x="299.72" y="223.52" size="1.778" layer="95" rot="MR0"/>
+<wire x1="330.2" y1="58.42" x2="330.2" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="50.8" x2="360.68" y2="50.8" width="0.1524" layer="91"/>
+<label x="360.68" y="50.8" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA"/>
@@ -11151,13 +11271,13 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </segment>
 <segment>
 <pinref part="U8" gate="G$1" pin="SDA"/>
-<wire x1="215.9" y1="124.46" x2="213.36" y2="124.46" width="0.1524" layer="91"/>
-<label x="205.74" y="124.46" size="1.778" layer="95"/>
+<wire x1="213.36" y1="124.46" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
+<label x="203.2" y="124.46" size="1.778" layer="95"/>
 <pinref part="U8" gate="G$1" pin="A0"/>
-<wire x1="213.36" y1="124.46" x2="205.74" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="114.3" x2="213.36" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="114.3" x2="213.36" y2="124.46" width="0.1524" layer="91"/>
-<junction x="213.36" y="124.46"/>
+<wire x1="210.82" y1="124.46" x2="203.2" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="114.3" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
+<junction x="210.82" y="124.46"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -11168,9 +11288,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="279.4" y1="231.14" x2="279.4" y2="226.06" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="226.06" x2="299.72" y2="226.06" width="0.1524" layer="91"/>
-<label x="299.72" y="226.06" size="1.778" layer="95" rot="MR0"/>
+<wire x1="340.36" y1="58.42" x2="340.36" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="53.34" x2="360.68" y2="53.34" width="0.1524" layer="91"/>
+<label x="360.68" y="53.34" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="SCL"/>
@@ -11184,15 +11304,16 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 </segment>
 <segment>
 <pinref part="U8" gate="G$1" pin="SCL"/>
-<wire x1="215.9" y1="127" x2="205.74" y2="127" width="0.1524" layer="91"/>
-<label x="205.74" y="127" size="1.778" layer="95"/>
+<wire x1="213.36" y1="127" x2="203.2" y2="127" width="0.1524" layer="91"/>
+<label x="203.2" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="USB1_IN" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="VBUS"/>
 <pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="149.86" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="149.86" x2="25.4" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="149.86" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="149.86" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="IN"/>
 <wire x1="40.64" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
@@ -11200,6 +11321,16 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="154.94" x2="40.64" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="154.94" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="149.86" x2="25.4" y2="152.4" width="0.1524" layer="91"/>
+<junction x="25.4" y="149.86"/>
+<wire x1="25.4" y1="152.4" x2="38.1" y2="152.4" width="0.1524" layer="91"/>
+<label x="38.1" y="152.4" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="R24" gate="G$1" pin="1"/>
+<wire x1="281.94" y1="213.36" x2="281.94" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="215.9" x2="266.7" y2="215.9" width="0.1524" layer="91"/>
+<label x="266.7" y="215.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="USB1_DM" class="0">
@@ -11316,15 +11447,26 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <junction x="119.38" y="149.86"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="USB2_IN" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="VBUS"/>
 <pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="68.58" x2="40.64" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="68.58" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="68.58" x2="40.64" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="68.58" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U7" gate="G$1" pin="IN"/>
 <wire x1="40.64" y1="68.58" x2="66.04" y2="68.58" width="0.1524" layer="91"/>
 <junction x="40.64" y="68.58"/>
+<wire x1="25.4" y1="68.58" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
+<junction x="25.4" y="68.58"/>
+<wire x1="25.4" y1="71.12" x2="38.1" y2="71.12" width="0.1524" layer="91"/>
+<label x="38.1" y="71.12" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="R26" gate="G$1" pin="1"/>
+<wire x1="312.42" y1="213.36" x2="312.42" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="215.9" x2="297.18" y2="215.9" width="0.1524" layer="91"/>
+<label x="297.18" y="215.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -11444,63 +11586,67 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <net name="N$16" class="0">
 <segment>
 <pinref part="U8" gate="G$1" pin="VIN-"/>
-<wire x1="236.22" y1="116.84" x2="241.3" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="116.84" x2="241.3" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="116.84" x2="238.76" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="116.84" x2="238.76" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="114.3" x2="246.38" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="114.3" x2="246.38" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="114.3" x2="243.84" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="114.3" x2="243.84" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="246.38" y1="114.3" x2="254" y2="114.3" width="0.1524" layer="91"/>
-<junction x="246.38" y="114.3"/>
+<wire x1="243.84" y1="114.3" x2="251.46" y2="114.3" width="0.1524" layer="91"/>
+<junction x="243.84" y="114.3"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="U8" gate="G$1" pin="VIN+"/>
-<wire x1="236.22" y1="121.92" x2="241.3" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="121.92" x2="241.3" y2="127" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="121.92" x2="238.76" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="121.92" x2="238.76" y2="127" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="241.3" y1="127" x2="246.38" y2="127" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="127" x2="246.38" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="127" x2="243.84" y2="127" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="127" x2="243.84" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="1"/>
-<wire x1="246.38" y1="127" x2="254" y2="127" width="0.1524" layer="91"/>
-<junction x="246.38" y="127"/>
+<wire x1="243.84" y1="127" x2="251.46" y2="127" width="0.1524" layer="91"/>
+<junction x="243.84" y="127"/>
 </segment>
 </net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="264.16" y1="157.48" x2="266.7" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="157.48" x2="264.16" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="154.94" x2="269.24" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="154.94" x2="269.24" y2="127" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="157.48" x2="264.16" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="157.48" x2="261.62" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="154.94" x2="266.7" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="154.94" x2="266.7" y2="127" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="2"/>
-<wire x1="264.16" y1="127" x2="269.24" y2="127" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="127" x2="266.7" y2="127" width="0.1524" layer="91"/>
 <pinref part="K1" gate="2" pin="S"/>
-<wire x1="238.76" y1="165.1" x2="238.76" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="167.64" x2="243.84" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="167.64" x2="243.84" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="157.48" x2="264.16" y2="157.48" width="0.1524" layer="91"/>
-<junction x="264.16" y="157.48"/>
+<wire x1="236.22" y1="165.1" x2="236.22" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="167.64" x2="241.3" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="167.64" x2="241.3" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="157.48" x2="261.62" y2="157.48" width="0.1524" layer="91"/>
+<junction x="261.62" y="157.48"/>
 <pinref part="K1" gate="3" pin="S"/>
-<wire x1="238.76" y1="149.86" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="152.4" x2="243.84" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="152.4" x2="243.84" y2="157.48" width="0.1524" layer="91"/>
-<junction x="243.84" y="157.48"/>
+<wire x1="236.22" y1="149.86" x2="236.22" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="152.4" x2="241.3" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="152.4" x2="241.3" y2="157.48" width="0.1524" layer="91"/>
+<junction x="241.3" y="157.48"/>
 </segment>
 </net>
 <net name="N$19" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
-<wire x1="276.86" y1="157.48" x2="279.4" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="157.48" x2="279.4" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="154.94" x2="274.32" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="274.32" y1="157.48" x2="276.86" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="157.48" x2="276.86" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="154.94" x2="271.78" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="264.16" y1="114.3" x2="274.32" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="114.3" x2="274.32" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="114.3" x2="271.78" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="114.3" x2="271.78" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="X3" gate=".1" pin="SK"/>
-<wire x1="279.4" y1="157.48" x2="284.48" y2="157.48" width="0.1524" layer="91"/>
-<junction x="279.4" y="157.48"/>
+<wire x1="276.86" y1="157.48" x2="281.94" y2="157.48" width="0.1524" layer="91"/>
+<junction x="276.86" y="157.48"/>
+<pinref part="R31" gate="G$1" pin="1"/>
+<wire x1="281.94" y1="157.48" x2="287.02" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="157.48" x2="281.94" y2="154.94" width="0.1524" layer="91"/>
+<junction x="281.94" y="157.48"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -11527,16 +11673,27 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="256.54" y="203.2" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="POWER_IN" class="0">
 <segment>
 <pinref part="X2" gate=".1" pin="SK"/>
-<wire x1="228.6" y1="160.02" x2="213.36" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="160.02" x2="213.36" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="K1" gate="2" pin="P"/>
-<wire x1="231.14" y1="160.02" x2="228.6" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="160.02" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="160.02" x2="226.06" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="K1" gate="3" pin="P"/>
-<wire x1="231.14" y1="144.78" x2="228.6" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="144.78" x2="228.6" y2="160.02" width="0.1524" layer="91"/>
-<junction x="228.6" y="160.02"/>
+<wire x1="228.6" y1="144.78" x2="226.06" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="144.78" x2="226.06" y2="160.02" width="0.1524" layer="91"/>
+<junction x="226.06" y="160.02"/>
+<wire x1="213.36" y1="160.02" x2="213.36" y2="162.56" width="0.1524" layer="91"/>
+<junction x="213.36" y="160.02"/>
+<wire x1="213.36" y1="162.56" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
+<label x="226.06" y="162.56" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="R28" gate="G$1" pin="1"/>
+<wire x1="342.9" y1="213.36" x2="342.9" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="342.9" y1="215.9" x2="327.66" y2="215.9" width="0.1524" layer="91"/>
+<label x="327.66" y="215.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -11621,19 +11778,6 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="256.54" y="198.12" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
-<net name="LED_SYS" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="PC0(ADC0/PCINT8)"/>
-<wire x1="256.54" y1="243.84" x2="236.22" y2="243.84" width="0.1524" layer="91"/>
-<label x="256.54" y="243.84" size="1.778" layer="95" rot="MR0"/>
-</segment>
-<segment>
-<label x="302.26" y="147.32" size="1.778" layer="95"/>
-<pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="302.26" y1="147.32" x2="342.9" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="342.9" y1="147.32" x2="342.9" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="LED_USB1" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="PC1(ADC1/PCINT9)"/>
@@ -11641,10 +11785,10 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="256.54" y="241.3" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<label x="302.26" y="154.94" size="1.778" layer="95"/>
+<label x="302.26" y="152.4" size="1.778" layer="95"/>
 <pinref part="R23" gate="G$1" pin="1"/>
-<wire x1="302.26" y1="154.94" x2="373.38" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="373.38" y1="154.94" x2="373.38" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="152.4" x2="365.76" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="152.4" x2="365.76" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_USB2" class="0">
@@ -11654,18 +11798,18 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="256.54" y="238.76" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<wire x1="322.58" y1="142.24" x2="302.26" y2="142.24" width="0.1524" layer="91"/>
-<label x="302.26" y="142.24" size="1.778" layer="95"/>
+<wire x1="314.96" y1="139.7" x2="302.26" y2="139.7" width="0.1524" layer="91"/>
+<label x="302.26" y="139.7" size="1.778" layer="95"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="322.58" y1="142.24" x2="322.58" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="139.7" x2="314.96" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_POWER" class="0">
 <segment>
-<wire x1="332.74" y1="144.78" x2="302.26" y2="144.78" width="0.1524" layer="91"/>
-<label x="302.26" y="144.78" size="1.778" layer="95"/>
+<wire x1="325.12" y1="142.24" x2="302.26" y2="142.24" width="0.1524" layer="91"/>
+<label x="302.26" y="142.24" size="1.778" layer="95"/>
 <pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="332.74" y1="144.78" x2="332.74" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="142.24" x2="325.12" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="PD6(AIN0/OC0A/PCINT22)"/>
@@ -11677,50 +11821,50 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="322.58" y1="129.54" x2="322.58" y2="127" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="127" x2="314.96" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$29" class="0">
 <segment>
 <pinref part="R19" gate="G$1" pin="2"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="332.74" y1="129.54" x2="332.74" y2="127" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="127" x2="325.12" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$30" class="0">
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
 <pinref part="LED3" gate="G$1" pin="A"/>
-<wire x1="342.9" y1="129.54" x2="342.9" y2="127" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="127" x2="335.28" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
 <pinref part="R21" gate="G$1" pin="2"/>
 <pinref part="LED4" gate="G$1" pin="A"/>
-<wire x1="353.06" y1="129.54" x2="353.06" y2="127" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="127" x2="345.44" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$32" class="0">
 <segment>
 <pinref part="R22" gate="G$1" pin="2"/>
 <pinref part="LED5" gate="G$1" pin="A"/>
-<wire x1="363.22" y1="129.54" x2="363.22" y2="127" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="127" x2="355.6" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="R23" gate="G$1" pin="2"/>
 <pinref part="LED6" gate="G$1" pin="A"/>
-<wire x1="373.38" y1="129.54" x2="373.38" y2="127" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="127" x2="365.76" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_IO1" class="0">
 <segment>
-<label x="302.26" y="149.86" size="1.778" layer="95"/>
+<label x="302.26" y="147.32" size="1.778" layer="95"/>
 <pinref part="R21" gate="G$1" pin="1"/>
-<wire x1="302.26" y1="149.86" x2="353.06" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="353.06" y1="149.86" x2="353.06" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="147.32" x2="345.44" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="147.32" x2="345.44" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="1" pin="PB2(SS/OC1B/PCINT2)"/>
@@ -11735,10 +11879,82 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="256.54" y="236.22" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<label x="302.26" y="152.4" size="1.778" layer="95"/>
+<label x="302.26" y="149.86" size="1.778" layer="95"/>
 <pinref part="R22" gate="G$1" pin="1"/>
-<wire x1="302.26" y1="152.4" x2="363.22" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="363.22" y1="152.4" x2="363.22" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="149.86" x2="355.6" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="149.86" x2="355.6" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="POWER_ADC" class="0">
+<segment>
+<pinref part="R29" gate="G$1" pin="1"/>
+<pinref part="R28" gate="G$1" pin="2"/>
+<wire x1="342.9" y1="198.12" x2="342.9" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="342.9" y1="200.66" x2="342.9" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="198.12" x2="337.82" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="200.66" x2="342.9" y2="200.66" width="0.1524" layer="91"/>
+<junction x="342.9" y="200.66"/>
+<wire x1="342.9" y1="200.66" x2="360.68" y2="200.66" width="0.1524" layer="91"/>
+<label x="360.68" y="200.66" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="PC0(ADC0/PCINT8)"/>
+<wire x1="236.22" y1="243.84" x2="256.54" y2="243.84" width="0.1524" layer="91"/>
+<label x="256.54" y="243.84" size="1.778" layer="95" rot="MR0"/>
+</segment>
+</net>
+<net name="USB1_ADC" class="0">
+<segment>
+<pinref part="R25" gate="G$1" pin="1"/>
+<pinref part="R24" gate="G$1" pin="2"/>
+<wire x1="281.94" y1="198.12" x2="281.94" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="C20" gate="G$1" pin="1"/>
+<wire x1="281.94" y1="200.66" x2="281.94" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="198.12" x2="276.86" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="200.66" x2="281.94" y2="200.66" width="0.1524" layer="91"/>
+<junction x="281.94" y="200.66"/>
+<wire x1="281.94" y1="200.66" x2="299.72" y2="200.66" width="0.1524" layer="91"/>
+<label x="299.72" y="200.66" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="ADC7"/>
+<wire x1="236.22" y1="226.06" x2="256.54" y2="226.06" width="0.1524" layer="91"/>
+<label x="256.54" y="226.06" size="1.778" layer="95" rot="MR0"/>
+</segment>
+</net>
+<net name="USB2_ADC" class="0">
+<segment>
+<pinref part="R27" gate="G$1" pin="1"/>
+<pinref part="R26" gate="G$1" pin="2"/>
+<wire x1="312.42" y1="198.12" x2="312.42" y2="200.66" width="0.1524" layer="91"/>
+<pinref part="C21" gate="G$1" pin="1"/>
+<wire x1="312.42" y1="200.66" x2="312.42" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="198.12" x2="307.34" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="200.66" x2="312.42" y2="200.66" width="0.1524" layer="91"/>
+<junction x="312.42" y="200.66"/>
+<wire x1="312.42" y1="200.66" x2="330.2" y2="200.66" width="0.1524" layer="91"/>
+<label x="330.2" y="200.66" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="ADC6"/>
+<wire x1="236.22" y1="228.6" x2="256.54" y2="228.6" width="0.1524" layer="91"/>
+<label x="256.54" y="228.6" size="1.778" layer="95" rot="MR0"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R30" gate="G$1" pin="2"/>
+<pinref part="LED7" gate="G$1" pin="A"/>
+<wire x1="375.92" y1="127" x2="375.92" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="BP"/>
+<pinref part="C23" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="231.14" x2="111.76" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="231.14" x2="111.76" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -11749,18 +11965,19 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <approved hash="104,1,175.26,193.04,IC1,AGND,GND,,,"/>
 <approved hash="104,1,175.26,208.28,IC1,VCC,+3V3,,,"/>
 <approved hash="115,1,147.32,147.807,X1,,,,,"/>
-<approved hash="115,1,322.902,123.19,LED1,,,,,"/>
+<approved hash="115,1,315.282,120.65,LED1,,,,,"/>
 <approved hash="115,1,46.3973,157.675,JP1,,,,,"/>
-<approved hash="115,1,331.217,245.241,ISP1,,,,,"/>
+<approved hash="115,1,288.037,245.241,ISP1,,,,,"/>
 <approved hash="115,1,147.32,66.5268,X4,,,,,"/>
 <approved hash="115,1,290.237,66.2347,JP2,,,,,"/>
 <approved hash="115,1,221.657,66.2347,JP3,,,,,"/>
-<approved hash="115,1,333.062,123.19,LED2,,,,,"/>
-<approved hash="115,1,343.222,123.19,LED3,,,,,"/>
-<approved hash="115,1,353.382,123.19,LED4,,,,,"/>
-<approved hash="115,1,363.542,123.19,LED5,,,,,"/>
-<approved hash="115,1,373.702,123.19,LED6,,,,,"/>
+<approved hash="115,1,325.442,120.65,LED2,,,,,"/>
+<approved hash="115,1,335.602,120.65,LED3,,,,,"/>
+<approved hash="115,1,345.762,120.65,LED4,,,,,"/>
+<approved hash="115,1,355.922,120.65,LED5,,,,,"/>
+<approved hash="115,1,366.082,120.65,LED6,,,,,"/>
 <approved hash="115,1,194.206,131.976,FRAME2,,,,,"/>
+<approved hash="115,1,376.242,120.65,LED7,,,,,"/>
 </errors>
 </schematic>
 </drawing>
