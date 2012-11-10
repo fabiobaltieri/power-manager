@@ -11899,9 +11899,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="360.68" y="200.66" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="PC0(ADC0/PCINT8)"/>
-<wire x1="236.22" y1="243.84" x2="256.54" y2="243.84" width="0.1524" layer="91"/>
-<label x="256.54" y="243.84" size="1.778" layer="95" rot="MR0"/>
+<pinref part="IC1" gate="1" pin="ADC6"/>
+<wire x1="236.22" y1="228.6" x2="256.54" y2="228.6" width="0.1524" layer="91"/>
+<label x="256.54" y="228.6" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="USB1_ADC" class="0">
@@ -11918,9 +11918,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="299.72" y="200.66" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="ADC7"/>
-<wire x1="236.22" y1="226.06" x2="256.54" y2="226.06" width="0.1524" layer="91"/>
-<label x="256.54" y="226.06" size="1.778" layer="95" rot="MR0"/>
+<pinref part="IC1" gate="1" pin="PC0(ADC0/PCINT8)"/>
+<wire x1="236.22" y1="243.84" x2="256.54" y2="243.84" width="0.1524" layer="91"/>
+<label x="256.54" y="243.84" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="USB2_ADC" class="0">
@@ -11937,9 +11937,9 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <label x="330.2" y="200.66" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="1" pin="ADC6"/>
-<wire x1="236.22" y1="228.6" x2="256.54" y2="228.6" width="0.1524" layer="91"/>
-<label x="256.54" y="228.6" size="1.778" layer="95" rot="MR0"/>
+<pinref part="IC1" gate="1" pin="ADC7"/>
+<wire x1="236.22" y1="226.06" x2="256.54" y2="226.06" width="0.1524" layer="91"/>
+<label x="256.54" y="226.06" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="N$10" class="0">
