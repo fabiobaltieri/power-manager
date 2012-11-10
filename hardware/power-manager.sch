@@ -10140,16 +10140,16 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="C19" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND48" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
-<part name="R24" library="rcl" deviceset="R-EU_" device="R0603" value="56k"/>
-<part name="R25" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R24" library="rcl" deviceset="R-EU_" device="R0603" value="33k"/>
+<part name="R25" library="rcl" deviceset="R-EU_" device="R0603" value="5k6"/>
 <part name="C20" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND49" library="supply1" deviceset="GND" device=""/>
-<part name="R26" library="rcl" deviceset="R-EU_" device="R0603" value="56k"/>
-<part name="R27" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R26" library="rcl" deviceset="R-EU_" device="R0603" value="33k"/>
+<part name="R27" library="rcl" deviceset="R-EU_" device="R0603" value="5k6"/>
 <part name="C21" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND50" library="supply1" deviceset="GND" device=""/>
-<part name="R28" library="rcl" deviceset="R-EU_" device="R0603" value="270k"/>
-<part name="R29" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R28" library="rcl" deviceset="R-EU_" device="R0603" value="180k"/>
+<part name="R29" library="rcl" deviceset="R-EU_" device="R0603" value="5k6"/>
 <part name="C22" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND51" library="supply1" deviceset="GND" device=""/>
 <part name="R30" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
