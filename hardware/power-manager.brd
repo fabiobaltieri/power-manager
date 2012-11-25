@@ -1570,7 +1570,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 </library>
 <library name="hammond">
 <packages>
-<package name="1151K">
+<package name="1551K">
 <wire x1="6.25" y1="0" x2="73" y2="0" width="0" layer="20"/>
 <wire x1="73" y1="0" x2="74" y2="1" width="0" layer="20" curve="90"/>
 <wire x1="74" y1="1" x2="74" y2="27.75" width="0" layer="20"/>
@@ -1909,7 +1909,7 @@ design rules under a new name.</description>
 <element name="X2" library="con-phoenix-381_l" package="MC2" value="MC2" x="11.5824" y="4.8768"/>
 <element name="X3" library="con-phoenix-381_l" package="MC2" value="MC2" x="20.9296" y="4.8768"/>
 <element name="U1" library="SparkFun-PowerIC" package="SOT23-5" value="MIC5301" x="56.6928" y="8.9408"/>
-<element name="BOX2" library="hammond" package="1151K" value="HAMMOND-BOX-K" x="0" y="0" locked="yes"/>
+<element name="BOX2" library="hammond" package="1551K" value="HAMMOND-BOX-K" x="0" y="0" locked="yes"/>
 <element name="D2" library="diode" package="SOT23" value="BAT54" x="3.048" y="10.9728" rot="MR180"/>
 <element name="Q1" library="SparkFun-DiscreteSemi" package="SOT23-3" value="BSS138" x="6.2992" y="10.9728" rot="MR0">
 <attribute name="PROD_ID" value="TRANS-00830" x="-141.0208" y="-157.9372" size="1.778" layer="28" rot="MR0" display="off"/>
