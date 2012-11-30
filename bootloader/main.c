@@ -219,6 +219,10 @@ static void initForUsbConnectivity(void)
 	sei();
 }
 
+#define LED_PORT	PORTB
+#define LED_DDR		DDRB
+#define LED		(_BV(PB4) | _BV(PB5))
+
 int __attribute__((noreturn)) main(void)
 {
 	uint16_t blink = 0;
@@ -235,7 +239,7 @@ int __attribute__((noreturn)) main(void)
 	GICR = (1 << IVSEL); /* move interrupts to boot flash section */
 #endif
 
-	DDRB |= _BV(PB3);
+	LED_DDR |= LED;
 
 	initForUsbConnectivity();
 	do{ /* main event loop */
@@ -253,14 +257,14 @@ int __attribute__((noreturn)) main(void)
 		}
 #endif
 		if (blink++ == 0) {
-			PORTB ^= _BV(PB3);
+			LED_PORT ^= LED;
 			if (loop++ > 10 && (pgm_read_byte(zero) != 0xff))
 				exitMainloop = 1;
 		}
 	} while (1);
 
-	DDRB &= ~_BV(PB3);
-	PORTB &= ~_BV(PB3);
+	LED_DDR &= ~LED;
+	LED_PORT &= ~LED;
 
 	leaveBootloader();
 }
