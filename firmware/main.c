@@ -47,6 +47,17 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 	return 0;
 }
 
+static void hello(void)
+{
+	uint8_t i;
+
+	for (i = 0; i < 8; i++) {
+		led_a_toggle();
+		led_b_toggle();
+		_delay_ms(33);
+	}
+}
+
 int __attribute__((noreturn)) main(void)
 {
 	uint8_t i;
@@ -56,6 +67,8 @@ int __attribute__((noreturn)) main(void)
 	led_b_off();
 
 	wdt_enable(WDTO_1S);
+
+	hello();
 
 	usbInit();
 	usbDeviceDisconnect();
