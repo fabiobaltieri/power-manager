@@ -1,12 +1,12 @@
 /* LEDs */
 
-#define LED_A_PORT    PORTC
-#define LED_A_DDR     DDRC
-#define LED_A         PC3
+#define LED_A_PORT    PORTB
+#define LED_A_DDR     DDRB
+#define LED_A         PB4
 
-#define LED_B_PORT    PORTD
-#define LED_B_DDR     DDRD
-#define LED_B         PD7
+#define LED_B_PORT    PORTB
+#define LED_B_DDR     DDRB
+#define LED_B         PB5
 
 #define led_a_on()     LED_A_PORT &= ~_BV(LED_A);
 #define led_a_off()    LED_A_PORT |=  _BV(LED_A);
