@@ -15,6 +15,7 @@ F_CPU = 12000000
 MCU = atmega168
 
 CFLAGS	= -Os -Wall -DF_CPU=$(F_CPU) -mmcu=$(MCU) -Iusbdrv -I.
+CFLAGS += -ffunction-sections -Wl,--relax -Wl,--gc-sections #-Wl,--print-gc-sections
 ASFLAGS	= -Os -Wall -DF_CPU=$(F_CPU) -mmcu=$(MCU) -Iusbdrv -I.
 LDFLAGS	= 
 
