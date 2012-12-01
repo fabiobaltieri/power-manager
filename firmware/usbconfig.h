@@ -30,7 +30,7 @@ section at the end of this file).
 /* This is the port where the USB bus is connected. When you configure it to
  * "B", the registers PORTB, PINB and DDRB will be used.
  */
-#define USB_CFG_DMINUS_BIT      4
+#define USB_CFG_DMINUS_BIT      1
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
  */
@@ -252,8 +252,8 @@ section at the end of this file).
  * obdev's free shared VID/PID pair. See the file USB-IDs-for-free.txt for
  * details.
  */
-#define USB_CFG_DEVICE_NAME     'T', 'e', 's', 't', ' ', 'D', 'e', 'v', 'i', 'c', 'e'
-#define USB_CFG_DEVICE_NAME_LEN 11
+#define USB_CFG_DEVICE_NAME     'p', 'o', 'w', 'e', 'r', '-', 'm', 'a', 'n', 'a', 'g', 'e', 'r'
+#define USB_CFG_DEVICE_NAME_LEN 13
 /* Same as above for the device name. If you don't want a device name, undefine
  * the macros. See the file USB-IDs-for-free.txt before you assign a name if
  * you use a shared VID/PID.
