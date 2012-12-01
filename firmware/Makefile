@@ -33,7 +33,7 @@ CFLAGS  = -Iusbdrv -Wall -mmcu=$(MCU) -DF_CPU=$(F_CPU)
 ASFLAGS =
 LDFLAGS =
 
-OBJS = version.o main.o jiffies.o \
+OBJS = version.o main.o jiffies.o io.o \
        usbdrv/usbdrv.o usbdrv/usbdrvasm.o usbdrv/oddebug.o
 
 # ----- Verbosity control -----------------------------------------------------

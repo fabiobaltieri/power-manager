@@ -8,6 +8,7 @@
 #include "board.h"
 #include "requests.h"
 #include "jiffies.h"
+#include "io.h"
 
 static void reset_cpu(void)
 {
@@ -65,6 +66,8 @@ int __attribute__((noreturn)) main(void)
 	led_init();
 	led_a_off();
 	led_b_off();
+
+	io_init();
 
 	wdt_enable(WDTO_1S);
 
