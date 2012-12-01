@@ -4,9 +4,10 @@
 #include <util/delay.h>
 
 #include "usbdrv.h"
-#include "board.h"
 
+#include "board.h"
 #include "requests.h"
+#include "jiffies.h"
 
 static void reset_cpu(void)
 {
@@ -68,6 +69,8 @@ int __attribute__((noreturn)) main(void)
 	wdt_enable(WDTO_1S);
 
 	hello();
+
+	jiffies_init();
 
 	usbInit();
 	usbDeviceDisconnect();
