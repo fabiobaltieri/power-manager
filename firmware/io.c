@@ -85,37 +85,45 @@ static uint8_t read_value(uint8_t port, uint8_t bit)
 
 uint8_t get_addr(uint8_t chan)
 {
+	struct channel *ch = &channels[chan];
+
 	if (chan >= CHANNEL_NR)
 		return 0;
 
-	return channels[chan].i2c_addr;
+	return ch->i2c_addr;
 }
 
 uint8_t read_fault(uint8_t chan)
 {
+	struct channel *ch = &channels[chan];
+
 	if (chan >= CHANNEL_NR)
 		return 0;
 
-	if (channels[chan].fault_port != CH_NA)
+	if (ch->fault_port != CH_NA)
 		return 0;
 
-	return !read_value(channels[chan].fault_port, channels[chan].fault_nr);
+	return !read_value(ch->fault_port, ch->fault_nr);
 }
 
 void set_en(uint8_t chan, uint8_t val)
 {
+	struct channel *ch = &channels[chan];
+
 	if (chan >= CHANNEL_NR)
 		return;
 
-	set_value(channels[chan].en_port, channels[chan].en_nr, val);
+	set_value(ch->en_port, ch->en_nr, val);
 }
 
 void set_led(uint8_t chan, uint8_t val)
 {
+	struct channel *ch = &channels[chan];
+
 	if (chan >= CHANNEL_NR)
 		return;
 
-	set_value(channels[chan].led_port, channels[chan].led_nr, val);
+	set_value(ch->led_port, ch->led_nr, val);
 }
 
 void io_init(void)
