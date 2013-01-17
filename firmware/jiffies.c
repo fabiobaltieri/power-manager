@@ -11,8 +11,8 @@ void jiffies_init(void)
 
 	TIMSK1 = (1 << OCIE1A);
 
-	TCCR0A = ((0 << WGM11) | (0 << WGM10)); /* CTC -> OCR1A*/
-	TCCR0B = ((0 << WGM13) | (1 << WGM12) |
+	TCCR1A = ((0 << WGM11) | (0 << WGM10)); /* CTC -> OCR1A*/
+	TCCR1B = ((0 << WGM13) | (1 << WGM12) |
 			(0 << CS12) | (1 << CS11) | (1 << CS10)); /* /64 */
 
 	OCR1A = F_CPU / 64 / HZ;
