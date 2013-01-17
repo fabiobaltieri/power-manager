@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1585,15 +1585,15 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="67.75" y1="30.75" x2="67.75" y2="34" width="0" layer="20"/>
 <hole x="57" y="2.75" drill="2.5"/>
 <hole x="17" y="31.25" drill="2.5"/>
-<dimension x1="1" y1="34" x2="15" y2="0" x3="-14.5" y3="17" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="74" y2="4.5" x3="37" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="17.8609375" y1="32.15625" x2="16.1390625" y2="30.34375" x3="20.69250625" y3="27.742115625" layer="47" dtype="diameter"/>
-<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="37" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="-7.75" y3="17" layer="47" dtype="vertical"/>
-<dimension x1="67.75" y1="30.75" x2="67.75" y2="34" x3="92.75" y3="32.375" layer="47"/>
-<dimension x1="74" y1="27.75" x2="70.75" y2="27.75" x3="72.375" y3="48.25" layer="47"/>
-<dimension x1="70.75" y1="30.75" x2="68.497859375" y2="28.768115625" x3="60.460146875" y3="26.094928125" layer="47" dtype="radius"/>
-<dimension x1="73" y1="1" x2="73.7633875" y2="0.35405625" x3="79.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="34" x2="15" y2="0" x3="-14.5" y3="17" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="74" y2="4.5" x3="37" y3="-16.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17.8609375" y1="32.15625" x2="16.1390625" y2="30.34375" x3="20.69250625" y3="27.742115625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="37" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="-7.75" y3="17" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="67.75" y1="30.75" x2="67.75" y2="34" x3="92.75" y3="32.375" textsize="3.5" layer="47"/>
+<dimension x1="74" y1="27.75" x2="70.75" y2="27.75" x3="72.375" y3="48.25" textsize="3.5" layer="47"/>
+<dimension x1="70.75" y1="30.75" x2="68.497859375" y2="28.768115625" x3="60.460146875" y3="26.094928125" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="73" y1="1" x2="73.7633875" y2="0.35405625" x3="79.7178" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="57" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
@@ -1935,13 +1935,13 @@ design rules under a new name.</description>
 <element name="C7" library="rcl" package="C0805" value="22p" x="70.7136" y="10.3632" rot="MR0"/>
 <element name="C8" library="rcl" package="C0805" value="22p" x="70.7136" y="14.4272" rot="MR180"/>
 <element name="ISP1" library="balto" package="2X03" value="" x="70.7136" y="21.7424" rot="R270"/>
-<element name="R4" library="rcl" package="R0603" value="10k" x="70.7136" y="17.0688" rot="R180"/>
-<element name="R5" library="rcl" package="R0603" value="10k" x="25.4" y="12.192" rot="R225"/>
-<element name="R6" library="rcl" package="R0603" value="10k" x="24.384" y="13.208" rot="R225"/>
+<element name="R4" library="rcl" package="R0603" value="5k6" x="70.7136" y="17.0688" rot="R180"/>
+<element name="R5" library="rcl" package="R0603" value="5k6" x="25.4" y="12.192" rot="R225"/>
+<element name="R6" library="rcl" package="R0603" value="5k6" x="24.384" y="13.208" rot="R225"/>
 <element name="U$2" library="SparkFun-Connectors" package="USB-MINIB" value="USB-MINIB-5PIN" x="44.5008" y="4.4704" rot="R90"/>
 <element name="R7" library="rcl" package="R0603" value="330" x="29.8704" y="30.8864" rot="MR0"/>
 <element name="C9" library="rcl" package="C0805" value=".1u" x="40.8432" y="9.3472" rot="R180"/>
-<element name="R8" library="rcl" package="R0603" value="10k" x="52.0192" y="15.4432" rot="R90"/>
+<element name="R8" library="rcl" package="R0603" value="22k" x="52.0192" y="15.4432" rot="R90"/>
 <element name="C10" library="rcl" package="C0805" value=".1u" x="45.9232" y="17.0688" rot="R90"/>
 <element name="R9" library="rcl" package="R0603" value="10" x="48.1584" y="16.256"/>
 <element name="R10" library="rcl" package="R0603" value="10" x="48.1584" y="17.8816"/>
@@ -1951,7 +1951,7 @@ design rules under a new name.</description>
 <element name="U7" library="balto" package="SOT23-6L" value="TPS2552" x="32.3088" y="13.8176" rot="R270"/>
 <element name="U$3" library="SparkFun-Connectors" package="USB-MINIB" value="USB-MINIB-5PIN" x="32.3088" y="4.4704" rot="R90"/>
 <element name="C11" library="rcl" package="C0805" value=".1u" x="28.6512" y="9.3472" rot="R180"/>
-<element name="R12" library="rcl" package="R0603" value="10k" x="35.3568" y="15.4432" rot="R90"/>
+<element name="R12" library="rcl" package="R0603" value="22k" x="35.3568" y="15.4432" rot="R90"/>
 <element name="C12" library="rcl" package="C0805" value=".1u" x="29.2608" y="17.0688" rot="R90"/>
 <element name="R13" library="rcl" package="R0603" value="10" x="31.496" y="16.256"/>
 <element name="R14" library="rcl" package="R0603" value="10" x="31.496" y="17.8816"/>
@@ -3161,44 +3161,6 @@ design rules under a new name.</description>
 <wire x1="57.6428" y1="10.2409" x2="57.6428" y2="11.9888" width="0.4064" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,fe2c089fd62db178"/>
-<approved hash="4,1,c62fecb324199f78"/>
-<approved hash="4,1,fe2e28a15e6b197b"/>
-<approved hash="4,1,f62eccf56c57277b"/>
-<approved hash="4,1,4e2e79399b935d78"/>
-<approved hash="4,1,662e754ee9ff6b78"/>
-<approved hash="5,1,1c6cf3cb4d2b7b50"/>
-<approved hash="5,1,3405a59b85321117"/>
-<approved hash="5,1,41a2984ac6ed2517"/>
-<approved hash="5,1,5f5ef37730417a1d"/>
-<approved hash="5,1,955493b98dfe90bb"/>
-<approved hash="5,1,2e4ab74574454b4f"/>
-<approved hash="5,1,5a32baa147652582"/>
-<approved hash="5,1,2c4b0d3c13ff2988"/>
-<approved hash="5,1,0d72456cf7bd5348"/>
-<approved hash="5,1,268bef943fa4c19f"/>
-<approved hash="5,1,7bb9ed6904d65d1f"/>
-<approved hash="5,1,65ede95cf2626a05"/>
-<approved hash="5,1,dd8c18d4e3028702"/>
-<approved hash="5,1,6c4b4d3c53ff6988"/>
-<approved hash="5,1,4d05691a43ca2748"/>
-<approved hash="5,1,66fc9be28bd3ed9f"/>
-<approved hash="5,1,adbcbd0d9e337606"/>
-<approved hash="5,1,b3e8f1386887091c"/>
-<approved hash="5,1,f9dfa4d7b3039751"/>
-<approved hash="5,1,e429545197e07b1f"/>
-<approved hash="5,1,bbf3f15f0a94a4d7"/>
-<approved hash="5,1,408010375a00ee58"/>
-<approved hash="5,16,e6cad31d9c011f02"/>
-<approved hash="5,16,f5cc51f53e93059e"/>
-<approved hash="4,16,d3eaa406a15e7e02"/>
-<approved hash="5,16,c4fb012c4e373934"/>
-<approved hash="5,16,d3fd83c4eca527a8"/>
-<approved hash="5,16,e061391847010d4c"/>
-<approved hash="5,16,d01fa9c8caeb09e8"/>
-<approved hash="4,16,ce10c7f05fd6ce80"/>
-</errors>
 </board>
 </drawing>
 </eagle>

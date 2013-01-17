@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -8944,15 +8944,15 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="67.75" y1="30.75" x2="67.75" y2="34" width="0" layer="20"/>
 <hole x="57" y="2.75" drill="2.5"/>
 <hole x="17" y="31.25" drill="2.5"/>
-<dimension x1="1" y1="34" x2="15" y2="0" x3="-14.5" y3="17" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="74" y2="4.5" x3="37" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="17.8609375" y1="32.15625" x2="16.1390625" y2="30.34375" x3="20.69250625" y3="27.742115625" layer="47" dtype="diameter"/>
-<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="37" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="-7.75" y3="17" layer="47" dtype="vertical"/>
-<dimension x1="67.75" y1="30.75" x2="67.75" y2="34" x3="92.75" y3="32.375" layer="47"/>
-<dimension x1="74" y1="27.75" x2="70.75" y2="27.75" x3="72.375" y3="48.25" layer="47"/>
-<dimension x1="70.75" y1="30.75" x2="68.497859375" y2="28.768115625" x3="60.460146875" y3="26.094928125" layer="47" dtype="radius"/>
-<dimension x1="73" y1="1" x2="73.7633875" y2="0.35405625" x3="79.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="34" x2="15" y2="0" x3="-14.5" y3="17" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="74" y2="4.5" x3="37" y3="-16.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17.8609375" y1="32.15625" x2="16.1390625" y2="30.34375" x3="20.69250625" y3="27.742115625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="37" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17" y1="31.25" x2="57" y2="2.75" x3="-7.75" y3="17" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="67.75" y1="30.75" x2="67.75" y2="34" x3="92.75" y3="32.375" textsize="3.5" layer="47"/>
+<dimension x1="74" y1="27.75" x2="70.75" y2="27.75" x3="72.375" y3="48.25" textsize="3.5" layer="47"/>
+<dimension x1="70.75" y1="30.75" x2="68.497859375" y2="28.768115625" x3="60.460146875" y3="26.094928125" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="73" y1="1" x2="73.7633875" y2="0.35405625" x3="79.7178" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="17" y="31.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="57" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
@@ -8973,15 +8973,15 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="37.75" y1="25.75" x2="37.75" y2="29" width="0" layer="20"/>
 <hole x="32" y="2.75" drill="2.5"/>
 <hole x="12" y="26.25" drill="2.5"/>
-<dimension x1="1" y1="29" x2="10" y2="0" x3="-14.5" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="12.8609375" y1="27.15625" x2="11.1390625" y2="25.34375" x3="15.692509375" y3="22.742115625" layer="47" dtype="diameter"/>
-<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="22" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="-7.75" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="37.75" y1="25.75" x2="37.75" y2="29" x3="62.75" y3="27.375" layer="47"/>
-<dimension x1="44" y1="22.75" x2="40.75" y2="22.75" x3="42.375" y3="43.25" layer="47"/>
-<dimension x1="40.75" y1="25.75" x2="38.497859375" y2="23.768115625" x3="32.64229375" y3="18.61521875" layer="47" dtype="radius"/>
-<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="29" x2="10" y2="0" x3="-14.5" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-16.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="12.8609375" y1="27.15625" x2="11.1390625" y2="25.34375" x3="15.692509375" y3="22.742115625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="22" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="-7.75" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="37.75" y1="25.75" x2="37.75" y2="29" x3="62.75" y3="27.375" textsize="3.5" layer="47"/>
+<dimension x1="44" y1="22.75" x2="40.75" y2="22.75" x3="42.375" y3="43.25" textsize="3.5" layer="47"/>
+<dimension x1="40.75" y1="25.75" x2="38.497859375" y2="23.768115625" x3="32.64229375" y3="18.61521875" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="12" y="26.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="12" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="32" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
@@ -8994,11 +8994,11 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="0" y1="37.25" x2="0" y2="7.25" width="0" layer="20"/>
 <hole x="79.5" y="9.75" drill="3.5"/>
 <hole x="14.5" y="34.75" drill="3.5"/>
-<dimension x1="7" y1="44.5" x2="7" y2="0" x3="-17.75" y3="22.25" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="7.25" x2="94" y2="7.25" x3="47" y3="73" layer="47" dtype="horizontal"/>
-<dimension x1="14.5" y1="9.75" x2="79.5" y2="9.75" x3="47" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="79.5" y1="34.75" x2="79.5" y2="9.75" x3="118.5" y3="22.25" layer="47" dtype="vertical"/>
-<dimension x1="15.70833125" y1="36.015871875" x2="13.29166875" y2="33.484128125" x3="20.000003125" y3="29.5" layer="47" dtype="diameter"/>
+<dimension x1="7" y1="44.5" x2="7" y2="0" x3="-17.75" y3="22.25" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="7.25" x2="94" y2="7.25" x3="47" y3="73" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="14.5" y1="9.75" x2="79.5" y2="9.75" x3="47" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="79.5" y1="34.75" x2="79.5" y2="9.75" x3="118.5" y3="22.25" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="15.70833125" y1="36.015871875" x2="13.29166875" y2="33.484128125" x3="20.000003125" y3="29.5" textsize="3.5" layer="47" dtype="diameter"/>
 <hole x="79.5" y="34.75" drill="3.5"/>
 <hole x="14.5" y="9.75" drill="3.5"/>
 <wire x1="0" y1="7.25" x2="3" y2="7.25" width="0" layer="20"/>
@@ -9013,9 +9013,9 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="0" y1="37.25" x2="3" y2="37.25" width="0" layer="20"/>
 <wire x1="3" y1="37.25" x2="7" y2="41.25" width="0" layer="20" curve="90"/>
 <wire x1="7" y1="41.25" x2="7" y2="44.5" width="0" layer="20"/>
-<dimension x1="7" y1="0" x2="87" y2="0" x3="47" y3="64.75" layer="47"/>
-<dimension x1="0" y1="37.25" x2="0" y2="7.25" x3="-7.5" y3="22.25" layer="47"/>
-<dimension x1="91" y1="41.25" x2="87.56185625" y2="39.205696875" x3="80.857475" y3="35.2193125" layer="47" dtype="radius"/>
+<dimension x1="7" y1="0" x2="87" y2="0" x3="47" y3="64.75" textsize="3.5" layer="47"/>
+<dimension x1="0" y1="37.25" x2="0" y2="7.25" x3="-7.5" y3="22.25" textsize="3.5" layer="47"/>
+<dimension x1="91" y1="41.25" x2="87.56185625" y2="39.205696875" x3="80.857475" y3="35.2193125" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="14.5" y="34.75" radius="3" width="0.127" layer="41"/>
 <circle x="14.5" y="34.75" radius="3" width="0.127" layer="42"/>
 <circle x="79.5" y="9.75" radius="3" width="0.127" layer="41"/>
@@ -9039,15 +9039,15 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="50.75" y1="22.75" x2="47.75" y2="25.75" width="0" layer="20" curve="-90"/>
 <wire x1="47.75" y1="25.75" x2="47.75" y2="29" width="0" layer="20"/>
 <hole x="17" y="26.25" drill="2.5"/>
-<dimension x1="1" y1="29" x2="15" y2="0" x3="-14.5" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="54" y2="4.5" x3="27" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="17.8609375" y1="27.15625" x2="16.1390625" y2="25.34375" x3="20.692509375" y3="22.742115625" layer="47" dtype="diameter"/>
-<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="27" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="-7.75" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="47.75" y1="25.75" x2="47.75" y2="29" x3="72.75" y3="27.375" layer="47"/>
-<dimension x1="54" y1="22.75" x2="50.75" y2="22.75" x3="52.375" y3="43.25" layer="47"/>
-<dimension x1="50.75" y1="25.75" x2="48.497859375" y2="23.768115625" x3="40.460146875" y3="21.094928125" layer="47" dtype="radius"/>
-<dimension x1="53" y1="1" x2="53.7633875" y2="0.35405625" x3="59.717796875" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="29" x2="15" y2="0" x3="-14.5" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="54" y2="4.5" x3="27" y3="-16.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17.8609375" y1="27.15625" x2="16.1390625" y2="25.34375" x3="20.692509375" y3="22.742115625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="27" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="-7.75" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="47.75" y1="25.75" x2="47.75" y2="29" x3="72.75" y3="27.375" textsize="3.5" layer="47"/>
+<dimension x1="54" y1="22.75" x2="50.75" y2="22.75" x3="52.375" y3="43.25" textsize="3.5" layer="47"/>
+<dimension x1="50.75" y1="25.75" x2="48.497859375" y2="23.768115625" x3="40.460146875" y3="21.094928125" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="53" y1="1" x2="53.7633875" y2="0.35405625" x3="59.717796875" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="37" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
@@ -9066,15 +9066,15 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="40.75" y1="22.75" x2="37.75" y2="25.75" width="0" layer="20" curve="-90"/>
 <wire x1="37.75" y1="25.75" x2="37.75" y2="29" width="0" layer="20"/>
 <hole x="12" y="26.25" drill="2.5"/>
-<dimension x1="1" y1="29" x2="10" y2="0" x3="-14.5" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="12.8609375" y1="27.15625" x2="11.1390625" y2="25.34375" x3="15.692509375" y3="22.742115625" layer="47" dtype="diameter"/>
-<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="22" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="-7.75" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="37.75" y1="25.75" x2="37.75" y2="29" x3="62.75" y3="27.375" layer="47"/>
-<dimension x1="44" y1="22.75" x2="40.75" y2="22.75" x3="42.375" y3="43.25" layer="47"/>
-<dimension x1="40.75" y1="25.75" x2="38.497859375" y2="23.768115625" x3="32.64229375" y3="18.61521875" layer="47" dtype="radius"/>
-<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="29" x2="10" y2="0" x3="-14.5" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-16.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="12.8609375" y1="27.15625" x2="11.1390625" y2="25.34375" x3="15.692509375" y3="22.742115625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="22" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="12" y1="26.25" x2="32" y2="2.75" x3="-7.75" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="37.75" y1="25.75" x2="37.75" y2="29" x3="62.75" y3="27.375" textsize="3.5" layer="47"/>
+<dimension x1="44" y1="22.75" x2="40.75" y2="22.75" x3="42.375" y3="43.25" textsize="3.5" layer="47"/>
+<dimension x1="40.75" y1="25.75" x2="38.497859375" y2="23.768115625" x3="32.64229375" y3="18.61521875" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="12" y="26.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="12" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="32" y="2.75" radius="2.250553125" width="0.127" layer="42"/>
@@ -9094,15 +9094,15 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="47.75" y1="25.75" x2="47.75" y2="29" width="0" layer="20"/>
 <hole x="37" y="2.75" drill="2.5"/>
 <hole x="17" y="26.25" drill="2.5"/>
-<dimension x1="1" y1="29" x2="15" y2="0" x3="-14.5" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="54" y2="4.5" x3="27" y3="-16.25" layer="47" dtype="horizontal"/>
-<dimension x1="17.8609375" y1="27.15625" x2="16.1390625" y2="25.34375" x3="20.692509375" y3="22.742115625" layer="47" dtype="diameter"/>
-<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="27" y3="-9.25" layer="47" dtype="horizontal"/>
-<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="-7.75" y3="14.5" layer="47" dtype="vertical"/>
-<dimension x1="47.75" y1="25.75" x2="47.75" y2="29" x3="72.75" y3="27.375" layer="47"/>
-<dimension x1="54" y1="22.75" x2="50.75" y2="22.75" x3="52.375" y3="43.25" layer="47"/>
-<dimension x1="50.75" y1="25.75" x2="48.497859375" y2="23.768115625" x3="40.460146875" y3="21.094928125" layer="47" dtype="radius"/>
-<dimension x1="53" y1="1" x2="53.7633875" y2="0.35405625" x3="59.717796875" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="29" x2="15" y2="0" x3="-14.5" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="54" y2="4.5" x3="27" y3="-16.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17.8609375" y1="27.15625" x2="16.1390625" y2="25.34375" x3="20.692509375" y3="22.742115625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="27" y3="-9.25" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="17" y1="26.25" x2="37" y2="2.75" x3="-7.75" y3="14.5" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="47.75" y1="25.75" x2="47.75" y2="29" x3="72.75" y3="27.375" textsize="3.5" layer="47"/>
+<dimension x1="54" y1="22.75" x2="50.75" y2="22.75" x3="52.375" y3="43.25" textsize="3.5" layer="47"/>
+<dimension x1="50.75" y1="25.75" x2="48.497859375" y2="23.768115625" x3="40.460146875" y3="21.094928125" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="53" y1="1" x2="53.7633875" y2="0.35405625" x3="59.717796875" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="17" y="26.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="37" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
@@ -9123,15 +9123,15 @@ Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (
 <wire x1="37.75" y1="40.75" x2="37.75" y2="44" width="0" layer="20"/>
 <hole x="34.5" y="2.75" drill="2.5"/>
 <hole x="9.5" y="41.25" drill="2.5"/>
-<dimension x1="1" y1="44" x2="10" y2="0" x3="-14.5" y3="22" layer="47" dtype="vertical"/>
-<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-21.5" layer="47" dtype="horizontal"/>
-<dimension x1="10.3609375" y1="42.15625" x2="8.6390625" y2="40.34375" x3="14.506571875" y3="36.49375625" layer="47" dtype="diameter"/>
-<dimension x1="9.5" y1="41.25" x2="34.5" y2="2.75" x3="22" y3="-15" layer="47" dtype="horizontal"/>
-<dimension x1="9.5" y1="41.25" x2="32" y2="2.75" x3="-8" y3="22" layer="47" dtype="vertical"/>
-<dimension x1="37.75" y1="40.75" x2="37.75" y2="44" x3="62.75" y3="42.375" layer="47"/>
-<dimension x1="44" y1="37.75" x2="40.75" y2="37.75" x3="42.375" y3="58.25" layer="47"/>
-<dimension x1="40.75" y1="40.75" x2="38.497859375" y2="38.768115625" x3="32.64229375" y3="33.61521875" layer="47" dtype="radius"/>
-<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" layer="47" dtype="radius"/>
+<dimension x1="1" y1="44" x2="10" y2="0" x3="-14.5" y3="22" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="0" y1="6.25" x2="44" y2="4.5" x3="22" y3="-21.5" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="10.3609375" y1="42.15625" x2="8.6390625" y2="40.34375" x3="14.506571875" y3="36.49375625" textsize="3.5" layer="47" dtype="diameter"/>
+<dimension x1="9.5" y1="41.25" x2="34.5" y2="2.75" x3="22" y3="-15" textsize="3.5" layer="47" dtype="horizontal"/>
+<dimension x1="9.5" y1="41.25" x2="32" y2="2.75" x3="-8" y3="22" textsize="3.5" layer="47" dtype="vertical"/>
+<dimension x1="37.75" y1="40.75" x2="37.75" y2="44" x3="62.75" y3="42.375" textsize="3.5" layer="47"/>
+<dimension x1="44" y1="37.75" x2="40.75" y2="37.75" x3="42.375" y3="58.25" textsize="3.5" layer="47"/>
+<dimension x1="40.75" y1="40.75" x2="38.497859375" y2="38.768115625" x3="32.64229375" y3="33.61521875" textsize="3.5" layer="47" dtype="radius"/>
+<dimension x1="43" y1="1" x2="43.7633875" y2="0.35405625" x3="49.7178" y3="-4.68429375" textsize="3.5" layer="47" dtype="radius"/>
 <circle x="9.5" y="41.25" radius="2.250553125" width="0.127" layer="41"/>
 <circle x="9.5" y="41.25" radius="2.250553125" width="0.127" layer="42"/>
 <circle x="34.5" y="2.75" radius="2.250553125" width="0.127" layer="41"/>
@@ -10037,10 +10037,10 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="ISP1" library="balto" deviceset="ISP-AVR910" device="PTH"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
-<part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="5k6"/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="5k6"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="5k6"/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
@@ -10050,7 +10050,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="22k"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="+3V11" library="supply1" deviceset="+3V3" device=""/>
@@ -10069,7 +10069,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C0805" value=".1u"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="22k"/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="+3V12" library="supply1" deviceset="+3V3" device=""/>
