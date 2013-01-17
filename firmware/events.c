@@ -15,7 +15,7 @@ uint8_t ev_count(void)
 	return queue.count;
 }
 
-uint8_t ev_full(void)
+static uint8_t ev_full(void)
 {
 	return (queue.count == EV_COUNT);
 }

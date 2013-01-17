@@ -7,7 +7,6 @@ struct event {
 #define EV_COUNT 32
 
 uint8_t ev_count(void);
-uint8_t ev_full(void);
 struct event *ev_last(void);
 struct event *ev_first(void);
 int8_t ev_drop_first(void);
