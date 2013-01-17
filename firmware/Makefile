@@ -141,4 +141,6 @@ fuse:
 	$(AVRDUDE) $(AVRDUDEFLAGS) -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m
 
 boot: $(NAME)_text.hex
+	../commandline/pm -R || true
+	sleep 1
 	$(BOOTLOADER) $(BOOTLOADER_FLAGS) $(NAME)_text.hex
