@@ -140,5 +140,5 @@ load: $(NAME)_text.hex $(NAME)_eeprom.hex
 fuse:
 	$(AVRDUDE) $(AVRDUDEFLAGS) -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m
 
-boot: $(NAME)_text.bin
+boot: $(NAME)_text.hex
 	$(BOOTLOADER) $(BOOTLOADER_FLAGS) $(NAME)_text.hex
