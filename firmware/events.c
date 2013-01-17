@@ -41,9 +41,9 @@ int8_t ev_drop_first(void)
 	return 0;
 }
 
-int8_t ev_push(struct event *evt_in)
+int8_t ev_push(struct event *ev_in)
 {
-	struct event *evt;
+	struct event *ev;
 	
 	if (ev_full())
 		return -1;
@@ -51,8 +51,8 @@ int8_t ev_push(struct event *evt_in)
 	queue.last = (queue.last + 1) % EV_COUNT;
 	queue.count++;
 
-	evt = ev_last();
-	memcpy(evt, evt_in, sizeof(*evt));
+	ev = ev_last();
+	memcpy(ev, ev_in, sizeof(*ev));
 
 	return 0;
 }
