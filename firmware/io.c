@@ -12,8 +12,9 @@ enum {
 };
 
 struct channel {
-	uint8_t  en_port:4,
-		 en_nr:4;
+	uint8_t  en_port:3,
+		 en_nr:4,
+		 en_inv:1;
 	uint8_t  fault_port:4,
 		 fault_nr:4;
 	uint8_t  led_port:4,
@@ -23,11 +24,11 @@ struct channel {
 };
 
 static struct channel channels[CHANNEL_NR] = {
-	[CHANNEL_USB1]  = {CH_PD, 0, CH_PD, 5, CH_PC, 1,    0, 0x40},
-	[CHANNEL_USB2]  = {CH_PD, 4, CH_PD, 3, CH_PC, 2,    7, 0x41},
-	[CHANNEL_POWER] = {CH_PD, 7, CH_NA, 0, CH_PD, 6,    6, 0x42},
-	[CHANNEL_IO1]   = {CH_PB, 1, CH_NA, 0, CH_PB, 2, 0xff, 0xff},
-	[CHANNEL_IO2]   = {CH_PB, 0, CH_NA, 0, CH_PC, 3, 0xff, 0xff},
+	[CHANNEL_USB1]  = {CH_PD, 0, 1, CH_PD, 5, CH_PC, 1,    0, 0x40},
+	[CHANNEL_USB2]  = {CH_PD, 4, 1, CH_PD, 3, CH_PC, 2,    7, 0x41},
+	[CHANNEL_POWER] = {CH_PD, 7, 0, CH_NA, 0, CH_PD, 6,    6, 0x42},
+	[CHANNEL_IO1]   = {CH_PB, 1, 0, CH_NA, 0, CH_PB, 2, 0xff, 0xff},
+	[CHANNEL_IO2]   = {CH_PB, 0, 0, CH_NA, 0, CH_PC, 3, 0xff, 0xff},
 };
 
 static void set_output(uint8_t port, uint8_t bit)
@@ -113,6 +114,9 @@ void set_en(uint8_t chan, uint8_t val)
 	if (chan >= CHANNEL_NR)
 		return;
 
+	if (ch->en_inv)
+		val = !val;
+
 	set_value(ch->en_port, ch->en_nr, val);
 }
 
@@ -136,10 +140,11 @@ void io_init(void)
 
 		/* EN output */
 		set_output(ch->en_port, ch->en_nr);
+		set_en(i, 0);
 
 		/* LED output */
 		set_output(ch->led_port, ch->led_nr);
-		set_value(ch->led_port, ch->led_nr, 0);
+		set_led(i, 0);
 
 		/* FAULT pull-up */
 		if (ch->fault_port != CH_NA)
