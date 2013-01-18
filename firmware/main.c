@@ -127,8 +127,8 @@ int __attribute__((noreturn)) main(void)
 	uint8_t i;
 
 	led_init();
-	led_a_on();
-	led_b_off();
+
+	adc_init();
 
 	io_init();
 	ev_reset();
@@ -136,6 +136,8 @@ int __attribute__((noreturn)) main(void)
 	wdt_enable(WDTO_1S);
 
 	hello();
+	led_a_on();
+	led_b_off();
 
 	jiffies_init();
 
