@@ -94,6 +94,16 @@ uint8_t get_addr(uint8_t chan)
 	return ch->i2c_addr;
 }
 
+uint8_t get_adc_ch(uint8_t chan)
+{
+	struct channel *ch = &channels[chan];
+
+	if (chan >= CHANNEL_NR)
+		return 0;
+
+	return ch->adc_ch;
+}
+
 uint8_t read_fault(uint8_t chan)
 {
 	struct channel *ch = &channels[chan];
