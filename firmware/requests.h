@@ -1,7 +1,7 @@
 /* frame formats */
 
 struct usb_status {
-	uint8_t	switches;
+	uint8_t	fail;
 	uint16_t voltage[3];	/* mV */
 	uint16_t current[3];	/* mA */
 };

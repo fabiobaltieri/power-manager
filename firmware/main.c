@@ -9,6 +9,9 @@
 #include "requests.h"
 #include "jiffies.h"
 #include "io.h"
+#include "events.h"
+
+static struct usb_status status;
 
 static void reset_cpu(void)
 {
@@ -22,30 +25,90 @@ static void reset_cpu(void)
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
 	struct usbRequest *rq = (void *)data;
-	static uchar dataBuffer[4];
+	struct event ev;
 
-	led_b_toggle();
-
-	if (rq->bRequest == CUSTOM_RQ_ECHO) {
-		dataBuffer[0] = rq->wValue.bytes[0];
-		dataBuffer[1] = rq->wValue.bytes[1];
-		dataBuffer[2] = rq->wIndex.bytes[0];
-		dataBuffer[3] = rq->wIndex.bytes[1];
-		usbMsgPtr = dataBuffer;
-		return 4;
-	} else if (rq->bRequest == CUSTOM_RQ_SET_STATUS) {
-		if (rq->wValue.bytes[0] & 0x01)
-			led_a_on()
-		else
-			led_a_off()
-	} else if (rq->bRequest == CUSTOM_RQ_GET_STATUS) {
-		dataBuffer[0] = 0xca;
-		usbMsgPtr = dataBuffer;
-		return 1;
-	} else if (rq->bRequest == CUSTOM_RQ_RESET) {
+	switch (rq->bRequest) {
+	case CUSTOM_RQ_STATUS:
+		status.fail = (read_fault(CHANNEL_USB1) ? 1 : 0) |
+			(read_fault(CHANNEL_USB2) ? 2 : 0);
+		usbMsgPtr = (uint8_t *)&status;
+		return sizeof(status);
+		break;
+	case CUSTOM_RQ_EV_CLEAR:
+		ev_reset();
+		break;
+	case CUSTOM_RQ_EV_PUSH:
+		if (ev_count() == 0) {
+			/* start from current time */
+			ev.ts = jiffies + rq->wValue.word;
+		} else {
+			/* start from last event */
+			struct event *tmp = ev_last();
+			ev.ts = tmp->ts + rq->wValue.word;
+		}
+		ev.mask = rq->wIndex.bytes[1];
+		ev.value = rq->wIndex.bytes[0];
+		ev_push(&ev);
+		break;
+	case CUSTOM_RQ_RESET:
 		reset_cpu();
+		break;
+	default:
+		/* do nothing */
+		;
 	}
+
 	return 0;
+}
+
+static void check_io(struct event *ev, uint8_t mask, uint8_t ch)
+{
+	if (ev->mask & mask) {
+		if (ev->value & mask) {
+			set_led(ch, 1);
+			set_en(ch, 1);
+		} else {
+			set_en(ch, 0);
+			set_led(ch, 0);
+		}
+	}
+}
+
+#define time_after(a, b) ((int16_t)b - (int16_t)a > 0)
+static void event_poll(void)
+{
+	static uint16_t holdoff = 0;
+	struct event *ev;
+
+	/* status LEDs */
+	if (ev_count()) {
+		led_a_off();
+		if (time_after(jiffies, holdoff))
+			led_b_off();
+		else
+			led_b_on();
+	} else {
+		led_a_on();
+		led_b_off();
+	}
+
+	/* event processing */
+	while (ev_count()) {
+		ev = ev_first();
+
+		if (time_after(jiffies, ev->ts))
+			return;
+
+		check_io(ev, PM_CH_USB1, CHANNEL_USB1);
+		check_io(ev, PM_CH_USB2, CHANNEL_USB2);
+		check_io(ev, PM_CH_POWER, CHANNEL_POWER);
+		check_io(ev, PM_CH_IO1, CHANNEL_IO1);
+		check_io(ev, PM_CH_IO2, CHANNEL_IO2);
+
+		ev_drop_first();
+
+		holdoff = jiffies + 5;
+	}
 }
 
 static void hello(void)
@@ -55,7 +118,7 @@ static void hello(void)
 	for (i = 0; i < 8; i++) {
 		led_a_toggle();
 		led_b_toggle();
-		_delay_ms(33);
+		_delay_ms(50);
 	}
 }
 
@@ -64,10 +127,11 @@ int __attribute__((noreturn)) main(void)
 	uint8_t i;
 
 	led_init();
-	led_a_off();
+	led_a_on();
 	led_b_off();
 
 	io_init();
+	ev_reset();
 
 	wdt_enable(WDTO_1S);
 
@@ -90,5 +154,6 @@ int __attribute__((noreturn)) main(void)
 	for (;;) {
 		wdt_reset();
 		usbPoll();
+		event_poll();
 	}
 }
