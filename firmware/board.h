@@ -21,3 +21,15 @@
 		LED_A_DDR |= _BV(LED_A);	\
 		LED_B_DDR |= _BV(LED_B);	\
 	} while (0);
+
+/* ADC */
+
+#define USB_PARTITOR_H		330	/* 33k */
+#define USB_PARTITOR_L		56	/* 5k6 */
+#define POWER_PARTITOR_H	1800	/* 180k */
+#define POWER_PARTITOR_L	56	/* 5k6 */
+
+#define USB_N	(USB_PARTITOR_L + USB_PARTITOR_H)
+#define USB_D	(USB_PARTITOR_L)
+#define POWER_N	(POWER_PARTITOR_H + POWER_PARTITOR_L)
+#define POWER_D	(POWER_PARTITOR_L)
