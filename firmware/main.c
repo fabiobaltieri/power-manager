@@ -10,6 +10,7 @@
 #include "jiffies.h"
 #include "io.h"
 #include "events.h"
+#include "adc.h"
 
 static struct usb_status status;
 
@@ -20,6 +21,17 @@ static void reset_cpu(void)
 	wdt_enable(WDTO_15MS);
 
 	for (;;);
+}
+
+#define div_round(a, b) (((a) + ((b)/2)) / (b))
+static uint16_t get_millivolts(uint8_t chan, uint32_t num, uint32_t den)
+{
+	adc_set_channel(get_adc_ch(chan));
+
+	_delay_us(200);
+
+	return div_round((uint32_t)adc_get_value() * 1100 * num,
+			 (uint32_t)1024 * den);
 }
 
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
