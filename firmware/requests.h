@@ -2,8 +2,9 @@
 
 struct usb_status {
 	uint8_t	fail;
-	uint16_t voltage[3];	/* mV */
-	uint16_t current[3];	/* mA */
+	uint16_t voltage_in[3];		/* mV */
+	uint16_t voltage_out[3];	/* mV */
+	uint16_t current[3];		/* mA */
 };
 
 #define PM_CH_USB1	0x01
