@@ -74,11 +74,11 @@ static uint8_t read_value(uint8_t port, uint8_t bit)
 {
 	switch (port) {
 		case CH_PB:
-			return !!(PINB &= 1 << bit);
+			return !!(PINB & (1 << bit));
 		case CH_PC:
-			return !!(PINC &= 1 << bit);
+			return !!(PINC & (1 << bit));
 		case CH_PD:
-			return !!(PIND &= 1 << bit);
+			return !!(PIND & (1 << bit));
 	}
 
 	return 0;
@@ -111,7 +111,7 @@ uint8_t read_fault(uint8_t chan)
 	if (chan >= CHANNEL_NR)
 		return 0;
 
-	if (ch->fault_port != CH_NA)
+	if (ch->fault_port == CH_NA)
 		return 0;
 
 	return !read_value(ch->fault_port, ch->fault_nr);
