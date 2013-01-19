@@ -14,6 +14,8 @@
 #include "i2c.h"
 #include "ina219.h"
 
+#define div_round(a, b) (((a) + ((b)/2)) / (b))
+
 static struct usb_status status;
 
 static void reset_cpu(void)
@@ -25,7 +27,6 @@ static void reset_cpu(void)
 	for (;;);
 }
 
-#define div_round(a, b) (((a) + ((b)/2)) / (b))
 static uint16_t get_millivolts(uint8_t chan, uint32_t num, uint32_t den)
 {
 	adc_set_channel(get_adc_ch(chan));
