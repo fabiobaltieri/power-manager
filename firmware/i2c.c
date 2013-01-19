@@ -84,7 +84,7 @@ uint16_t i2c_read_word(uint8_t addr, uint8_t reg)
 
 	i2c_rdwr(addr, &reg, 1, out, sizeof(out));
 
-	return (out[1] << 8) | out[0];
+	return (out[0] << 8) | out[1];
 }
 
 void i2c_write_word(uint8_t addr, uint8_t reg, uint16_t val)
