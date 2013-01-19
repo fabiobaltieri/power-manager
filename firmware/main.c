@@ -105,6 +105,7 @@ static void event_poll(void)
 	} else {
 		led_a_on();
 		led_b_off();
+		holdoff = jiffies;
 	}
 
 	/* event processing */
