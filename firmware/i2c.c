@@ -4,8 +4,6 @@
 
 #include "i2c.h"
 
-#define F_SCL 400000
-
 static int8_t i2c_rdwr(uint8_t addr,
 		       uint8_t *out_buf, uint8_t out_len,
 		       uint8_t *in_buf, uint8_t in_len)
@@ -98,8 +96,8 @@ void i2c_write_word(uint8_t addr, uint8_t reg, uint16_t val)
 	i2c_rdwr(addr, out, sizeof(out), NULL, 0);
 }
 
-void i2c_init(void)
+void i2c_init(uint32_t freq)
 {
-	TWBR = ((F_CPU / F_SCL) - 16) / 2;
+	TWBR = ((F_CPU / freq) - 16) / 2;
 	TWCR = _BV(TWEN);
 }

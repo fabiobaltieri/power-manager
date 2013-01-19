@@ -144,7 +144,7 @@ int __attribute__((noreturn)) main(void)
 	led_init();
 
 	adc_init();
-	i2c_init();
+	i2c_init(400000);
 	ina_init();
 
 	io_init();
