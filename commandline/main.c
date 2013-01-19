@@ -32,6 +32,43 @@ static void send_reset(usb_dev_handle *handle)
 	}
 }
 
+static void status(usb_dev_handle *handle)
+{
+	int ret;
+	struct usb_status status;
+
+	ret = usb_control_msg(handle,
+			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
+			      USB_ENDPOINT_IN,
+			      CUSTOM_RQ_STATUS,
+			      0, 0, (char *)&status, sizeof(status), 1000);
+
+	if (ret < 0) {
+		printf("usb_control_msg: %s\n", usb_strerror());
+		exit(1);
+	}
+
+	/* print status */
+	printf("               USB1   USB2  POWER\n");
+	printf(" voltage_in: %6hd %6hd %6hd\n",
+	       status.voltage_in[0],
+	       status.voltage_in[1],
+	       status.voltage_in[2]);
+	printf("voltage_out: %6hd %6hd %6hd\n",
+	       status.voltage_out[0],
+	       status.voltage_out[1],
+	       status.voltage_out[2]);
+	printf("    current: %6hd %6hd %6hd\n",
+	       status.current[0],
+	       status.current[1],
+	       status.current[2]);
+	printf("      power: %6hd %6hd %6hd\n",
+	       status.power[0],
+	       status.power[1],
+	       status.power[2]);
+	printf("       fail: %02x\n", status.fail);
+}
+
 static void usage(char *name)
 {
 	fprintf(stderr, "Usage: %s -h\n", name);
