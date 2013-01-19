@@ -11,6 +11,8 @@
 #include "io.h"
 #include "events.h"
 #include "adc.h"
+#include "i2c.h"
+#include "ina219.h"
 
 static struct usb_status status;
 
@@ -141,6 +143,8 @@ int __attribute__((noreturn)) main(void)
 	led_init();
 
 	adc_init();
+	i2c_init();
+	ina_init();
 
 	io_init();
 	ev_reset();

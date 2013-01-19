@@ -33,3 +33,7 @@
 #define USB_D	(USB_PARTITOR_L)
 #define POWER_N	(POWER_PARTITOR_H + POWER_PARTITOR_L)
 #define POWER_D	(POWER_PARTITOR_L)
+
+/* Shunt */
+#define RSHUNT_USB	100000	/* 100 mOhm */
+#define RSHUNT_POWER	50000	/* 50 mOhm */
