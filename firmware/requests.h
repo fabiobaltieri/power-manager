@@ -1,11 +1,12 @@
 /* frame formats */
 
 struct usb_status {
+	int16_t voltage_in[3];		/* mV */
+	int16_t voltage_out[3];		/* mV */
+	int16_t current[3];		/* mA */
+	int16_t power[3];		/* mW */
 	uint8_t	fail;
-	uint16_t voltage_in[3];		/* mV */
-	uint16_t voltage_out[3];	/* mV */
-	uint16_t current[3];		/* mA */
-};
+} __attribute__((__packed__));;
 
 #define PM_CH_USB1	0x01
 #define PM_CH_USB2	0x02
