@@ -137,6 +137,25 @@ static void hello(void)
 	}
 }
 
+void ina_init(void)
+{
+	/* USB 1 */
+	i2c_write_word(get_addr(CHANNEL_USB1), INA2XX_CONFIG,
+		       INA219_CONFIG_DEFAULT);
+	i2c_write_word(get_addr(CHANNEL_USB1), INA2XX_CALIBRATION,
+		       INA219_CALIBRATION_FACT / RSHUNT_USB);
+	/* USB 2 */
+	i2c_write_word(get_addr(CHANNEL_USB2), INA2XX_CONFIG,
+		       INA219_CONFIG_DEFAULT);
+	i2c_write_word(get_addr(CHANNEL_USB2), INA2XX_CALIBRATION,
+		       INA219_CALIBRATION_FACT / RSHUNT_USB);
+	/* POWER */
+	i2c_write_word(get_addr(CHANNEL_POWER), INA2XX_CONFIG,
+		       INA219_CONFIG_DEFAULT);
+	i2c_write_word(get_addr(CHANNEL_POWER), INA2XX_CALIBRATION,
+		       INA219_CALIBRATION_FACT / RSHUNT_POWER);
+}
+
 int __attribute__((noreturn)) main(void)
 {
 	uint8_t i;
