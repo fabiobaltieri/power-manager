@@ -32,7 +32,23 @@ static void send_reset(usb_dev_handle *handle)
 	}
 }
 
-static void status(usb_dev_handle *handle)
+static void send_clear(usb_dev_handle *handle)
+{
+	int ret;
+
+	ret = usb_control_msg(handle,
+			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
+			      USB_ENDPOINT_IN,
+			      CUSTOM_RQ_EV_CLEAR,
+			      0, 0, NULL,0, 1000);
+
+	if (ret < 0) {
+		printf("usb_control_msg: %s\n", usb_strerror());
+		exit(1);
+	}
+}
+
+static void show_status(usb_dev_handle *handle)
 {
 	int ret;
 	struct usb_status status;
@@ -69,6 +85,31 @@ static void status(usb_dev_handle *handle)
 	printf("       fail: %02x\n", status.fail);
 }
 
+static void send_event(usb_dev_handle *handle,
+		       int delay, int mask, int value)
+{
+	int ret;
+	uint16_t usb_index;
+	uint16_t usb_value;
+
+	usb_index = delay & 0xffff;
+	usb_value = ((mask & 0xff) << 8) | (value & 0xff);
+
+	printf("%04hx %04hx\n", usb_index, usb_value);
+
+	ret = usb_control_msg(handle,
+			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
+			      USB_ENDPOINT_OUT,
+			      CUSTOM_RQ_EV_PUSH,
+			      usb_index, usb_value,
+			      NULL, 0, 1000);
+
+	if (ret < 0) {
+		printf("usb_control_msg: %s\n", usb_strerror());
+		exit(1);
+	}
+}
+
 static void usage(char *name)
 {
 	fprintf(stderr, "Usage: %s -h\n", name);
@@ -77,8 +118,44 @@ static void usage(char *name)
 	fprintf(stderr, "options:\n"
 			"  -h         this help\n"
 			"  -R         reset device\n"
+			"  -s         show status\n"
+			"  -w         wait delay in tenth of seconds"
+			"  -C         clear event queue\n"
+			"  -e list    enable listed i/o (comma separated)\n"
+			"  -d list    disable listed i/o (comma separated)\n"
+			"\n"
+			"valid i/o: usb1,usb2,power,io1,io2,all\n"
 			);
 	exit(1);
+}
+
+static int parse_io(char *str)
+{
+	int ret = 0;
+	char *tk;
+
+	while ((tk = strtok(str, ",;:")) != NULL) {
+		if (strcmp(tk, "usb1") == 0) {
+			ret |= PM_CH_USB1;
+		} else if (strcmp(tk, "usb2") == 0) {
+			ret |= PM_CH_USB2;
+		} else if (strcmp(tk, "power") == 0) {
+			ret |= PM_CH_POWER;
+		} else if (strcmp(tk, "io1") == 0) {
+			ret |= PM_CH_IO1;
+		} else if (strcmp(tk, "io2") == 0) {
+			ret |= PM_CH_IO2;
+		} else if (strcmp(tk, "all") == 0) {
+			ret |= PM_CH_USB1 | PM_CH_USB2 |
+				PM_CH_POWER |
+				PM_CH_IO1 | PM_CH_IO2;
+		} else {
+			printf("unknown i/o: %s\n", tk);
+		}
+		str = NULL;
+	}
+
+	return ret;
 }
 
 int main(int argc, char **argv)
@@ -86,16 +163,41 @@ int main(int argc, char **argv)
 	usb_dev_handle *handle = NULL;
 	int opt;
 	int reset = 0;
+	int status = 0;
+	int mask = 0;
+	int value = 0;
+	int delay = 0;
+	int clear = 0;
+	int tmp;
 
 	usb_init();
 
-	while ((opt = getopt(argc, argv, "hR")) != -1) {
+	while ((opt = getopt(argc, argv, "hRCse:d:w:")) != -1) {
 		switch (opt) {
 		case 'h':
 			usage(argv[0]);
 			break;
 		case 'R':
 			reset = 1;
+			break;
+		case 'C':
+			clear = 1;
+			break;
+		case 's':
+			status = 1;
+			break;
+		case 'w':
+			delay = strtol(optarg, NULL, 0);
+			break;
+		case 'e':
+			tmp = parse_io(optarg);
+			value |= tmp;
+			mask |= tmp;
+			break;
+		case 'd':
+			tmp = parse_io(optarg);
+			value &= ~tmp;
+			mask |= tmp;
 			break;
 		default:
 			usage(argv[0]);
@@ -112,7 +214,14 @@ int main(int argc, char **argv)
 		return 0;
 	}
 
-	/* TODO: do stuff */
+	if (clear)
+		send_clear(handle);
+
+	if (status)
+		show_status(handle);
+
+	if (mask)
+		send_event(handle, delay, mask, value);
 
 	usb_close(handle);
 
