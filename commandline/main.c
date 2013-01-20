@@ -95,8 +95,6 @@ static void send_event(usb_dev_handle *handle,
 	usb_index = delay & 0xffff;
 	usb_value = ((mask & 0xff) << 8) | (value & 0xff);
 
-	printf("%04hx %04hx\n", usb_index, usb_value);
-
 	ret = usb_control_msg(handle,
 			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
 			      USB_ENDPOINT_OUT,
