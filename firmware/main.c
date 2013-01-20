@@ -37,6 +37,51 @@ static uint16_t get_millivolts(uint8_t chan, uint32_t num, uint32_t den)
 			 (uint32_t)1024 * den);
 }
 
+static void update_status(void)
+{
+	int16_t val;
+
+	status.fail = (read_fault(CHANNEL_USB1) ? 1 : 0) |
+		(read_fault(CHANNEL_USB2) ? 2 : 0);
+
+	status.voltage_in[0] = get_millivolts(CHANNEL_USB1,
+					      USB_N, USB_D);
+	status.voltage_in[1] = get_millivolts(CHANNEL_USB2,
+					      USB_N, USB_D);
+	status.voltage_in[2] = get_millivolts(CHANNEL_POWER,
+					      POWER_N, POWER_D);
+
+	val = i2c_read_word(get_addr(CHANNEL_USB1), INA2XX_BUS_VOLTAGE);
+	val = (val >> INA219_BUS_VOLTAGE_SHIFT) * INA219_BUS_VOLTAGE_LSB;
+	status.voltage_out[0] = val;
+
+	val = i2c_read_word(get_addr(CHANNEL_USB2), INA2XX_BUS_VOLTAGE);
+	val = (val >> INA219_BUS_VOLTAGE_SHIFT) * INA219_BUS_VOLTAGE_LSB;
+	status.voltage_out[1] = val;
+
+	val = i2c_read_word(get_addr(CHANNEL_POWER), INA2XX_BUS_VOLTAGE);
+	val = (val >> INA219_BUS_VOLTAGE_SHIFT) * INA219_BUS_VOLTAGE_LSB;
+	status.voltage_out[2] = val;
+
+	val = i2c_read_word(get_addr(CHANNEL_USB1), INA2XX_CURRENT);
+	status.current[0] = val;
+
+	val = i2c_read_word(get_addr(CHANNEL_USB2), INA2XX_CURRENT);
+	status.current[1] = val;
+
+	val = i2c_read_word(get_addr(CHANNEL_POWER), INA2XX_CURRENT);
+	status.current[2] = val;
+
+	val = i2c_read_word(get_addr(CHANNEL_USB1), INA2XX_POWER);
+	status.power[0] = val * INA219_POWER_LSB;
+
+	val = i2c_read_word(get_addr(CHANNEL_USB2), INA2XX_POWER);
+	status.power[1] = val * INA219_POWER_LSB;
+
+	val = i2c_read_word(get_addr(CHANNEL_POWER), INA2XX_POWER);
+	status.power[2] = val * INA219_POWER_LSB;
+}
+
 usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 {
 	struct usbRequest *rq = (void *)data;
@@ -44,11 +89,9 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 
 	switch (rq->bRequest) {
 	case CUSTOM_RQ_STATUS:
-		status.fail = (read_fault(CHANNEL_USB1) ? 1 : 0) |
-			(read_fault(CHANNEL_USB2) ? 2 : 0);
+		update_status();
 		usbMsgPtr = (uint8_t *)&status;
 		return sizeof(status);
-		break;
 	case CUSTOM_RQ_EV_CLEAR:
 		ev_reset();
 		break;
