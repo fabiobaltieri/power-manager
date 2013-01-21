@@ -72,21 +72,21 @@ static void show_status(usb_dev_handle *handle)
 	       (status.state & PM_CH_IO1) ? '*' : ' ',
 	       (status.state & PM_CH_IO2) ? '*' : ' ');
 	printf(" voltage_in: %6hd %6hd %6hd\n",
-	       status.voltage_in[0],
-	       status.voltage_in[1],
-	       status.voltage_in[2]);
+	       le16toh(status.voltage_in[0]),
+	       le16toh(status.voltage_in[1]),
+	       le16toh(status.voltage_in[2]));
 	printf("voltage_out: %6hd %6hd %6hd\n",
-	       status.voltage_out[0],
-	       status.voltage_out[1],
-	       status.voltage_out[2]);
+	       le16toh(status.voltage_out[0]),
+	       le16toh(status.voltage_out[1]),
+	       le16toh(status.voltage_out[2]));
 	printf("    current: %6hd %6hd %6hd\n",
-	       status.current[0],
-	       status.current[1],
-	       status.current[2]);
+	       le16toh(status.current[0]),
+	       le16toh(status.current[1]),
+	       le16toh(status.current[2]));
 	printf("      power: %6hd %6hd %6hd\n",
-	       status.power[0],
-	       status.power[1],
-	       status.power[2]);
+	       le16toh(status.power[0]),
+	       le16toh(status.power[1]),
+	       le16toh(status.power[2]));
 	printf("       fail: %02x\n", status.fail);
 }
 
