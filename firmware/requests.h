@@ -5,6 +5,7 @@ struct usb_status {
 	int16_t voltage_out[3];		/* mV */
 	int16_t current[3];		/* mA */
 	int16_t power[3];		/* mW */
+	uint8_t	state;
 	uint8_t	fail;
 } __attribute__((__packed__));;
 

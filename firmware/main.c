@@ -125,9 +125,11 @@ static void check_io(struct event *ev, uint8_t mask, uint8_t ch)
 		if (ev->value & mask) {
 			set_led(ch, 1);
 			set_en(ch, 1);
+			status.state |= (1 << ch);
 		} else {
 			set_en(ch, 0);
 			set_led(ch, 0);
+			status.state &= ~(1 << ch);
 		}
 	}
 }
