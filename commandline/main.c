@@ -65,7 +65,12 @@ static void show_status(usb_dev_handle *handle)
 	}
 
 	/* print status */
-	printf("               USB1   USB2  POWER\n");
+	printf("              USB1%c  USB2%c POWER%c   IO1%c   IO2%c\n",
+	       (status.state & PM_CH_USB1) ? '*' : ' ',
+	       (status.state & PM_CH_USB2) ? '*' : ' ',
+	       (status.state & PM_CH_POWER) ? '*' : ' ',
+	       (status.state & PM_CH_IO1) ? '*' : ' ',
+	       (status.state & PM_CH_IO2) ? '*' : ' ');
 	printf(" voltage_in: %6hd %6hd %6hd\n",
 	       status.voltage_in[0],
 	       status.voltage_in[1],
