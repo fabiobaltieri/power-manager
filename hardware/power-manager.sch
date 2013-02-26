@@ -10006,7 +10006,7 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="BSS138" device="TRANS-00830" value="BSS138"/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="U2" library="balto" deviceset="INA219" device=""/>
-<part name="K1" library="relay" deviceset="G6J*-2?-Y" device="FL"/>
+<part name="K1" library="relay" deviceset="G6J*-2?-Y" device="FL" value="IM03GR"/>
 <part name="U3" library="balto" deviceset="TPS2552" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="1k5"/>
@@ -10100,13 +10100,13 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="GND35" library="supply1" deviceset="GND" device=""/>
 <part name="GND36" library="supply1" deviceset="GND" device=""/>
 <part name="D1" library="diode" deviceset="BAT54" device=""/>
-<part name="K2" library="relay" deviceset="G6J*-2?-Y" device="FL"/>
+<part name="K2" library="relay" deviceset="G6J*-2?-Y" device="FL" value="IM03GR"/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="Q2" library="SparkFun-DiscreteSemi" deviceset="BSS138" device="TRANS-00830" value="BSS138"/>
 <part name="GND37" library="supply1" deviceset="GND" device=""/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="D3" library="diode" deviceset="BAT54" device=""/>
-<part name="K3" library="relay" deviceset="G6J*-2?-Y" device="FL"/>
+<part name="K3" library="relay" deviceset="G6J*-2?-Y" device="FL" value="IM03GR"/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="BSS138" device="TRANS-00830" value="BSS138"/>
 <part name="GND38" library="supply1" deviceset="GND" device=""/>
@@ -10201,10 +10201,10 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="363.22" y1="86.36" x2="363.22" y2="48.26" width="0.1524" layer="97"/>
 <wire x1="363.22" y1="48.26" x2="325.12" y2="48.26" width="0.1524" layer="97"/>
 <wire x1="325.12" y1="48.26" x2="325.12" y2="86.36" width="0.1524" layer="97"/>
-<wire x1="299.72" y1="106.68" x2="383.54" y2="106.68" width="0.1524" layer="97"/>
-<wire x1="383.54" y1="106.68" x2="383.54" y2="170.18" width="0.1524" layer="97"/>
-<wire x1="383.54" y1="170.18" x2="299.72" y2="170.18" width="0.1524" layer="97"/>
-<wire x1="299.72" y1="170.18" x2="299.72" y2="106.68" width="0.1524" layer="97"/>
+<wire x1="299.72" y1="104.14" x2="386.08" y2="104.14" width="0.1524" layer="97"/>
+<wire x1="386.08" y1="104.14" x2="386.08" y2="170.18" width="0.1524" layer="97"/>
+<wire x1="386.08" y1="170.18" x2="299.72" y2="170.18" width="0.1524" layer="97"/>
+<wire x1="299.72" y1="170.18" x2="299.72" y2="104.14" width="0.1524" layer="97"/>
 <wire x1="5.08" y1="170.18" x2="160.02" y2="170.18" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="170.18" x2="160.02" y2="93.98" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="93.98" x2="5.08" y2="93.98" width="0.1524" layer="97"/>
@@ -10229,6 +10229,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <wire x1="363.22" y1="228.6" x2="363.22" y2="175.26" width="0.1524" layer="97"/>
 <wire x1="363.22" y1="175.26" x2="264.16" y2="175.26" width="0.1524" layer="97"/>
 <wire x1="264.16" y1="175.26" x2="264.16" y2="228.6" width="0.1524" layer="97"/>
+<text x="373.38" y="106.68" size="1.778" layer="97">RED</text>
+<text x="355.6" y="106.68" size="1.778" layer="97">&lt;-- GREEN</text>
 </plain>
 <instances>
 <instance part="LICENSE1" gate="G$1" x="289.56" y="25.4"/>
