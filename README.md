@@ -13,6 +13,7 @@ Main features:
 - Voltage and current measurement on both USB and power ports, before and after
   the switch
 - Two additional independent relay lines (for switch simulation)
+- Programmable delayed switching sequence for all ports
 
 License
 -------
