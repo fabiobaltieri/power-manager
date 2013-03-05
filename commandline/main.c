@@ -122,7 +122,7 @@ static void usage(char *name)
 			"  -h         this help\n"
 			"  -R         reset device\n"
 			"  -s         show status\n"
-			"  -w         wait delay in tenth of seconds"
+			"  -w         wait delay in tenth of seconds\n"
 			"  -C         clear event queue\n"
 			"  -e list    enable listed i/o (comma separated)\n"
 			"  -d list    disable listed i/o (comma separated)\n"
