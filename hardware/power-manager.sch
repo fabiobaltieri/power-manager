@@ -10030,8 +10030,8 @@ This is the "EZ" version, which has limited top masking for improved ease of ass
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="Y1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="5X3" value="12MHz"/>
-<part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="22p"/>
-<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="22p"/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="33p"/>
+<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="33p"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="ISP1" library="balto" deviceset="ISP-AVR910" device="PTH"/>

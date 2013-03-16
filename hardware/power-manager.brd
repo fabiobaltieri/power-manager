@@ -1932,8 +1932,8 @@ design rules under a new name.</description>
 <element name="C5" library="rcl" package="C0805" value=".1u" x="64.8208" y="30.8864" rot="R90"/>
 <element name="C6" library="rcl" package="C0805" value=".1u" x="62.992" y="30.8864" rot="R90"/>
 <element name="Y1" library="SparkFun-FreqCtrl" package="CRYSTAL-SMD-5X3" value="12MHz" x="70.7136" y="12.3952" rot="R90"/>
-<element name="C7" library="rcl" package="C0805" value="22p" x="70.7136" y="10.3632" rot="MR0"/>
-<element name="C8" library="rcl" package="C0805" value="22p" x="70.7136" y="14.4272" rot="MR180"/>
+<element name="C7" library="rcl" package="C0805" value="33p" x="70.7136" y="10.3632" rot="MR0"/>
+<element name="C8" library="rcl" package="C0805" value="33p" x="70.7136" y="14.4272" rot="MR180"/>
 <element name="ISP1" library="balto" package="2X03" value="" x="70.7136" y="21.7424" rot="R270"/>
 <element name="R4" library="rcl" package="R0603" value="5k6" x="70.7136" y="17.0688" rot="R180"/>
 <element name="R5" library="rcl" package="R0603" value="5k6" x="25.4" y="12.192" rot="R225"/>
