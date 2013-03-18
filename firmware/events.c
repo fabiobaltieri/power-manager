@@ -33,7 +33,7 @@ struct event *ev_first(void)
 int8_t ev_drop_first(void)
 {
 	if (ev_count() == 0)
-		return - 1;
+		return -1;
 
 	queue.first = (queue.first + 1) % EV_COUNT;
 	queue.count--;
