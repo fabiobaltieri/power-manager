@@ -26,11 +26,13 @@ the Free Software Foundation, either version 2 of the License, or
 Contents
 --------
 
-    COPYING     text version of the GPL
-    README      this file
-    bootloader/ source directory for bootloader
-    firmware/   source directory for main firmware
-    hardware/   source directory for the hardware design
+    COPYING      text version of the GPL
+    README       this file
+    bootloader/  source directory for bootloader
+    bootloader-util/ source directory for bootloader utility (bootloadHID)
+    commandline/ source directory for the "pm" utility
+    firmware/    source directory for main firmware
+    hardware/    source directory for the hardware design
 
 Firmware and Bootloader
 -----------------------
