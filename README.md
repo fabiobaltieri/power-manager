@@ -1,7 +1,7 @@
 USB Power Manager
 =================
 
-http://fabiobaltieri.com/2013/xx/xx/usb-power-manager/
+http://fabiobaltieri.com/2013/03/22/power-manager/
 
 This project is an USB power controller, and allows to control the power lines
 of two USB ports and a generic supply line.
