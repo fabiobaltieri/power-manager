@@ -19,11 +19,37 @@
 
 #include <usb.h>
 
-#include "opendevice.h"
-
 #include "../firmware/requests.h"
 
-#define PRODUCT "power-manager"
+#define VENDOR_ID 0x1d50
+#define PRODUCT_ID 0x6061
+
+static int usb_open_device(usb_dev_handle **device,
+		int vendor_id, int product_id)
+{
+	struct usb_bus *bus;
+	struct usb_device *dev;
+	usb_dev_handle *handle;
+
+	usb_find_busses();
+	usb_find_devices();
+
+	for (bus = usb_get_busses(); bus; bus = bus->next) {
+		for (dev = bus->devices; dev; dev = dev->next) {
+			if (dev->descriptor.idVendor == vendor_id &&
+					dev->descriptor.idProduct == product_id) {
+				handle = usb_open(dev);
+				if (!handle)
+					continue;
+
+				*device = handle;
+				return 0;
+			}
+		}
+	}
+
+	return -1;
+}
 
 static void send_reset(usb_dev_handle *handle)
 {
@@ -216,8 +242,9 @@ int main(int argc, char **argv)
 		}
 	}
 
-	if (usbOpenDevice(&handle, 0, NULL, 0, PRODUCT, NULL, NULL, NULL)) {
-		fprintf(stderr, "error: could not find USB device \"%s\"\n", PRODUCT);
+	if (usb_open_device(&handle, VENDOR_ID, PRODUCT_ID)) {
+		fprintf(stderr, "error: could not find USB device %04x:%04x\n",
+				VENDOR_ID, PRODUCT_ID);
 		exit(1);
 	}
 

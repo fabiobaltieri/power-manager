@@ -14,7 +14,7 @@ EXE_SUFFIX =
 
 NAME = pm
 
-OBJECTS = opendevice.o main.o
+OBJECTS = main.o
 
 CC		= gcc
 CFLAGS	= $(CPPFLAGS) $(USBFLAGS) -O -g -Wall
