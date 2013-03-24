@@ -17,85 +17,62 @@
 #include <sys/types.h>
 #include <endian.h>
 
-#include <usb.h>
+#include <libusb.h>
 
 #include "../firmware/requests.h"
 
 #define VENDOR_ID 0x1d50
 #define PRODUCT_ID 0x6061
 
-static int usb_open_device(usb_dev_handle **device,
-		int vendor_id, int product_id)
-{
-	struct usb_bus *bus;
-	struct usb_device *dev;
-	usb_dev_handle *handle;
-
-	usb_find_busses();
-	usb_find_devices();
-
-	for (bus = usb_get_busses(); bus; bus = bus->next) {
-		for (dev = bus->devices; dev; dev = dev->next) {
-			if (dev->descriptor.idVendor == vendor_id &&
-					dev->descriptor.idProduct == product_id) {
-				handle = usb_open(dev);
-				if (!handle)
-					continue;
-
-				*device = handle;
-				return 0;
-			}
-		}
-	}
-
-	return -1;
-}
-
-static void send_reset(usb_dev_handle *handle)
+static void send_reset(libusb_device_handle *usbdev)
 {
 	int ret;
 
-	ret = usb_control_msg(handle,
-			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
-			      USB_ENDPOINT_IN,
-			      CUSTOM_RQ_RESET,
-			      0, 0, NULL, 0, 1000);
+	ret = libusb_control_transfer(usbdev,
+			LIBUSB_REQUEST_TYPE_VENDOR |
+			LIBUSB_RECIPIENT_DEVICE |
+			LIBUSB_ENDPOINT_IN,
+			CUSTOM_RQ_RESET,
+			0, 0, NULL, 0, 1000);
 
 	if (ret < 0) {
-		printf("usb_control_msg: %s\n", usb_strerror());
+		printf("libusb_control_transfer: %s\n", libusb_error_name(ret));
 		exit(1);
 	}
 }
 
-static void send_clear(usb_dev_handle *handle)
+static void send_clear(libusb_device_handle *usbdev)
 {
 	int ret;
 
-	ret = usb_control_msg(handle,
-			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
-			      USB_ENDPOINT_IN,
-			      CUSTOM_RQ_EV_CLEAR,
-			      0, 0, NULL,0, 1000);
+	ret = libusb_control_transfer(usbdev,
+			LIBUSB_REQUEST_TYPE_VENDOR |
+			LIBUSB_RECIPIENT_DEVICE |
+			LIBUSB_ENDPOINT_IN,
+			CUSTOM_RQ_EV_CLEAR,
+			0, 0, NULL,0, 1000);
 
 	if (ret < 0) {
-		printf("usb_control_msg: %s\n", usb_strerror());
+		printf("libusb_control_transfer: %s\n", libusb_error_name(ret));
 		exit(1);
 	}
 }
 
-static void show_status(usb_dev_handle *handle)
+static void show_status(libusb_device_handle *usbdev)
 {
 	int ret;
 	struct usb_status status;
 
-	ret = usb_control_msg(handle,
-			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
-			      USB_ENDPOINT_IN,
+	ret = libusb_control_transfer(usbdev,
+			      LIBUSB_REQUEST_TYPE_VENDOR |
+			      LIBUSB_RECIPIENT_DEVICE |
+			      LIBUSB_ENDPOINT_IN,
 			      CUSTOM_RQ_STATUS,
-			      0, 0, (char *)&status, sizeof(status), 1000);
+			      0, 0,
+			      (unsigned char *)&status, sizeof(status), 1000);
 
 	if (ret < 0) {
-		printf("usb_control_msg: %s\n", usb_strerror());
+		printf("libusb_control_transfer: %s\n", libusb_error_name(ret));
 		exit(1);
 	}
 
@@ -125,7 +102,7 @@ static void show_status(usb_dev_handle *handle)
 	printf("       fail: %02x\n", status.fail);
 }
 
-static void send_event(usb_dev_handle *handle,
+static void send_event(libusb_device_handle *usbdev,
 		       int delay, int mask, int value)
 {
 	int ret;
@@ -135,15 +112,16 @@ static void send_event(usb_dev_handle *handle,
 	usb_index = delay & 0xffff;
 	usb_value = ((mask & 0xff) << 8) | (value & 0xff);
 
-	ret = usb_control_msg(handle,
-			      USB_TYPE_VENDOR | USB_RECIP_DEVICE |
-			      USB_ENDPOINT_OUT,
-			      CUSTOM_RQ_EV_PUSH,
-			      usb_index, usb_value,
-			      NULL, 0, 1000);
+	ret = libusb_control_transfer(usbdev,
+			LIBUSB_REQUEST_TYPE_VENDOR |
+			LIBUSB_RECIPIENT_DEVICE |
+			LIBUSB_ENDPOINT_IN,
+			CUSTOM_RQ_EV_PUSH,
+			usb_index, usb_value,
+			NULL, 0, 1000);
 
 	if (ret < 0) {
-		printf("usb_control_msg: %s\n", usb_strerror());
+		printf("libusb_control_transfer: %s\n", libusb_error_name(ret));
 		exit(1);
 	}
 }
@@ -198,7 +176,8 @@ static int parse_io(char *str)
 
 int main(int argc, char **argv)
 {
-	usb_dev_handle *handle = NULL;
+	libusb_context *ctx;
+	libusb_device_handle *usbdev;
 	int opt;
 	int reset = 0;
 	int status = 0;
@@ -208,7 +187,7 @@ int main(int argc, char **argv)
 	int clear = 0;
 	int tmp;
 
-	usb_init();
+	libusb_init(&ctx);
 
 	while ((opt = getopt(argc, argv, "hRCse:d:w:")) != -1) {
 		switch (opt) {
@@ -242,27 +221,30 @@ int main(int argc, char **argv)
 		}
 	}
 
-	if (usb_open_device(&handle, VENDOR_ID, PRODUCT_ID)) {
+	usbdev = libusb_open_device_with_vid_pid(ctx, VENDOR_ID, PRODUCT_ID);
+	if (!usbdev) {
 		fprintf(stderr, "error: could not find USB device %04x:%04x\n",
 				VENDOR_ID, PRODUCT_ID);
 		exit(1);
 	}
 
 	if (reset) {
-		send_reset(handle);
+		send_reset(usbdev);
 		return 0;
 	}
 
 	if (clear)
-		send_clear(handle);
+		send_clear(usbdev);
 
 	if (status)
-		show_status(handle);
+		show_status(usbdev);
 
 	if (mask)
-		send_event(handle, delay, mask, value);
+		send_event(usbdev, delay, mask, value);
 
-	usb_close(handle);
+	libusb_close(usbdev);
+
+	libusb_exit(ctx);
 
 	return 0;
 }

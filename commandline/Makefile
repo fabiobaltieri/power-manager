@@ -2,8 +2,8 @@
 # This Makefile has been tested on Mac OS X, Linux and Windows.
 
 # Use the following 3 lines on Unix (uncomment the framework on Mac OS X):
-USBFLAGS = `libusb-config --cflags`
-USBLIBS = `libusb-config --libs`
+USBFLAGS = `pkg-config libusb-1.0 --cflags`
+USBLIBS = `pkg-config libusb-1.0 --libs`
 EXE_SUFFIX =
 
 # Use the following 3 lines on Windows and comment out the 3 above. You may
