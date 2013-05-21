@@ -5,7 +5,6 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
  */
 
 #include <avr/io.h>
@@ -65,7 +64,11 @@ static int8_t i2c_rdwr(uint8_t addr,
 
 	/* read data */
 	for (i = 0; i < in_len; i++) {
-		TWCR = _BV(TWINT) | _BV(TWEA) | _BV(TWEN);
+		if (i + 1 < in_len)
+			TWCR = _BV(TWINT) | _BV(TWEA) | _BV(TWEN);
+		else
+			/* last byte for us, send NACK */
+			TWCR = _BV(TWINT) | _BV(TWEN);
 		loop_until_bit_is_set(TWCR, TWINT);
 
 		in_buf[i] = TWDR;
